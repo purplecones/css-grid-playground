@@ -55,7 +55,12 @@ const Menu = styled.div`
   align-items: center;
   padding: .5rem;
   > .menu-item {
-    &:nth-child(1) {
+    margin: 0 5px 0 5px;
+    color: #fe8757;
+    h1 {
+      font-family: 'Gloria Hallelujah', cursive;
+    }
+    &:nth-child(2) {
       margin-right: auto;
     }
   }
@@ -123,10 +128,18 @@ class Interactive extends React.Component {
         <nav>
           <Menu>
             <div className="menu-item">
-              <img src={process.env.PUBLIC_URL+'/swing.svg'} height="40" alt="CSS Grid Playground Logo"/>
+              <a href="https://www.cssgridplayground.com">
+                <img src={process.env.PUBLIC_URL+'/swing.svg'} height="40" alt="CSS Grid Playground Logo"/>
+              </a>
             </div>
             <div className="menu-item">
-              <a className="github-button" href="https://github.com/purplecones/css-grid-playground" data-icon="octicon-star" data-style="mega" data-count-href="/purplecones/css-grid-playground/stargazers" data-count-api="/repos/purplecones/css-grid-playground#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star purplecones/css-grid-playground on GitHub">Star</a>
+              <h1>CSS Grid Playground</h1>
+            </div>
+            <div className="menu-item">
+              <a href="https://github.com/purplecones/css-grid-playground">
+                <img src={process.env.PUBLIC_URL+'/github.png'} alt="Github Logo"/>
+              </a>
+              {/* <a className="github-button" href="https://github.com/purplecones/css-grid-playground" data-icon="octicon-star" data-style="mega" data-count-href="/purplecones/css-grid-playground/stargazers" data-count-api="/repos/purplecones/css-grid-playground#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star purplecones/css-grid-playground on GitHub">Star</a> */}
             </div>
           </Menu>
         </nav>
