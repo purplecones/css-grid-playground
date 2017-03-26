@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import MobileDetect from 'mobile-detect';
 import Input from './Input';
 import GridContainer from './GridContainer';
 import GridItem from './GridItem';
@@ -55,12 +56,12 @@ const Menu = styled.div`
   align-items: center;
   padding: .5rem;
   > .menu-item {
-    margin: 0 5px 0 5px;
+    margin: 0 5px 10px 5px;
     color: #fe8757;
     h1 {
       font-family: 'Gloria Hallelujah', cursive;
     }
-    &:nth-child(2) {
+    &:nth-child(1) {
       margin-right: auto;
     }
   }
@@ -136,24 +137,30 @@ class Interactive extends React.Component {
       globalItemStyle={this.state.globalItemStyle}
       updateItemStyle={this.updateItemStyle} />;
   })
+  componentDidMount() {
+    const md = new MobileDetect(window.navigator.userAgent);
+    if (md.mobile()) {
+      this.setState({ isIncompatible: true });
+    }
+  }
   render() {
+    if (this.state.isIncompatible) {
+      return (
+        <div style={{ margin: '10px'}}>
+          <p>CSS Grid Layout does not work on your device yet. Come back on a desktop running Chrome 57 or Firefox 52. 🍻</p>
+          <p><a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
+        </div>
+      );
+    }
     return (
       <MainContainer>
         <nav>
           <Menu>
             <div className="menu-item">
-              <Logo href="https://www.cssgridplayground.com">
-                <img src={process.env.PUBLIC_URL+'/swing.svg'}
-                alt="CSS Grid Playground Logo"/>
-              </Logo>
-            </div>
-            <div className="menu-item">
               <Title>CSS Grid Playground</Title>
             </div>
             <div className="menu-item">
-              <a target="_blank" href="https://github.com/purplecones/css-grid-playground">
-                <img src={process.env.PUBLIC_URL+'/github.png'} alt="Github Logo"/>
-              </a>
+              <a className="github-button" href="https://github.com/purplecones/css-grid-playground" data-style="mega" aria-label="Star purplecones/css-grid-playground on GitHub">Star</a>
             </div>
           </Menu>
         </nav>
