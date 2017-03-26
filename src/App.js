@@ -68,7 +68,10 @@ const Menu = styled.div`
 
 const Title = styled.h1`
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 const gridContainerStyle =
@@ -84,10 +87,21 @@ const defaultItemStyles = [
 'height: 100px;',
 '',
 `grid-column: span 3;
-width: 400px;
+width: 300px;
 height: 100px;
 justify-self: center;`
 ];
+
+const Logo = styled.a`
+  > img {
+    height: 40px;
+  }
+  @media (max-width: 600px) {
+    > img {
+      height: 25px;
+    }
+  }
+`;
 
 const globalItemStyle =
 `background: lightsalmon;`;
@@ -128,18 +142,18 @@ class Interactive extends React.Component {
         <nav>
           <Menu>
             <div className="menu-item">
-              <a href="https://www.cssgridplayground.com">
-                <img src={process.env.PUBLIC_URL+'/swing.svg'} height="40" alt="CSS Grid Playground Logo"/>
-              </a>
+              <Logo href="https://www.cssgridplayground.com">
+                <img src={process.env.PUBLIC_URL+'/swing.svg'}
+                alt="CSS Grid Playground Logo"/>
+              </Logo>
             </div>
             <div className="menu-item">
-              <h1>CSS Grid Playground</h1>
+              <Title>CSS Grid Playground</Title>
             </div>
             <div className="menu-item">
-              <a href="https://github.com/purplecones/css-grid-playground">
+              <a target="_blank" href="https://github.com/purplecones/css-grid-playground">
                 <img src={process.env.PUBLIC_URL+'/github.png'} alt="Github Logo"/>
               </a>
-              {/* <a className="github-button" href="https://github.com/purplecones/css-grid-playground" data-icon="octicon-star" data-style="mega" data-count-href="/purplecones/css-grid-playground/stargazers" data-count-api="/repos/purplecones/css-grid-playground#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star purplecones/css-grid-playground on GitHub">Star</a> */}
             </div>
           </Menu>
         </nav>

@@ -7,6 +7,9 @@ const Button = styled.button`
   border: 0;
   text-align: center;
   cursor: pointer;
+  &:focus {
+    outline: none;
+  }
   &:nth-child(3) {
     margin: 0 0 0 5px;
   }
