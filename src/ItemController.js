@@ -1,0 +1,28 @@
+import React from 'react';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  height: 25px;
+  width: 25px;
+  background: white;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+  &:last-child {
+    margin: 0 5px 0 10px;
+  }
+`;
+class ItemController extends React.Component {
+  render() {
+    return (
+      <div>
+        <Button onClick={this.props.onIncrease}>👆</Button>
+        <Button onClick={this.props.onDecrease}>👇</Button>
+        <Button onClick={this.props.onHideStyle}>👀</Button>
+      </div>
+    );
+  }
+
+}
+
+export default ItemController;
