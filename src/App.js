@@ -105,9 +105,10 @@ class Interactive extends React.Component {
       itemStyles,
     });
   }
+  resetStyles = () => this.setState({ itemStyles: [] })
   incrementGridItems = value => this.setState({ numberOfGridItems: this.state.numberOfGridItems + value })
   renderGridItems = () => [...Array(this.state.numberOfGridItems)].map((_, key) => {
-    const itemStyle = this.state.itemStyles[key];
+    const itemStyle = this.state.itemStyles[key] ? this.state.itemStyles[key] : '';
     return <GridItem
       key={key}
       index={key}
@@ -143,6 +144,7 @@ class Interactive extends React.Component {
               <Header>Grid Items</Header>
               <ItemController
                 onHideStyle={this.updateAutoItemHide}
+                onReset={this.resetStyles}
                 onDecrease={this.incrementGridItems.bind(this, -1)}
                 onIncrease={this.incrementGridItems.bind(this, 1)}/>
             </PanelHeading>
