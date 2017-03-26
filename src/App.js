@@ -1,5 +1,4 @@
 import React from 'react';
-import randomColor from 'randomcolor';
 import styled from 'styled-components';
 import Input from './Input';
 import GridContainer from './GridContainer';
@@ -12,9 +11,10 @@ const MainContainer = styled.div`
   height: 100%;
 `;
 
-const PanelHeading = styled.h3`
+const PanelHeading = styled.div`
   display: flex;
   align-items: baseline;
+  height: 30px;
 `;
 const Header = styled.h3`
   text-align: center;
@@ -66,29 +66,64 @@ const Title = styled.h1`
   font-size: 1.5rem;
 `;
 
+const gridContainerStyle =
+`display: grid;
+grid-template-columns: 2fr 5fr 2fr;
+grid-gap: 1rem;`;
+
+const defaultItemStyles = [
+`grid-row: span 8;`,
+`grid-column: 2 / 4;`,
+`grid-row: span 9;`,
+`grid-row: span 9;`,
+'height: 100px;',
+'',
+`grid-column: span 3;
+width: 400px;
+height: 100px;
+justify-self: center;`
+];
+
+const globalItemStyle =
+`background: lightsalmon;`;
+
 class Interactive extends React.Component {
-  getRandomColor = () => randomColor()
   state = {
-    gridContainerStyle: `display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-gap: 1rem;`,
-    defaultGridItemStyles: '',
-    numberOfGridItems: 9,
+    globalItemStyle,
+    gridContainerStyle,
+    itemStyles: defaultItemStyles,
+    numberOfGridItems: 7,
     autoHideItemStyle: true,
-    gridItemColor: '#f2598c', //this.getRandomColor(),
   }
   updateAutoItemHide = () => this.setState({ autoHideItemStyle: !this.state.autoHideItemStyle })
-  updateColor = () => this.setState({ gridItemColor: this.getRandomColor() })
-  updateGridContainerStyle = value => this.setState({ gridContainerStyle: value})
-  updateDefaultItemStyle = value => this.setState({ defaultGridItemStyle: value})
-  incrementGridItems = value => this.setState({ numberOfGridItems: this.state.numberOfGridItems + value})
-  renderGridItems = () => [...Array(this.state.numberOfGridItems)].map((i, key) => <GridItem defaultItemStyle={this.state.defaultGridItemStyle} key={key} />)
+  updateGridContainerStyle = value => this.setState({ gridContainerStyle: value })
+  updateGlobalItemStyles = value => this.setState({ globalItemStyle: value })
+  updateItemStyle = (itemIndex, value) => {
+    const itemStyles = [...this.state.itemStyles];
+    itemStyles[itemIndex] = value;
+    this.setState({
+      itemStyles,
+    });
+  }
+  incrementGridItems = value => this.setState({ numberOfGridItems: this.state.numberOfGridItems + value })
+  renderGridItems = () => [...Array(this.state.numberOfGridItems)].map((_, key) => {
+    const itemStyle = this.state.itemStyles[key];
+    return <GridItem
+      key={key}
+      index={key}
+      itemStyle={itemStyle}
+      autoHide= {this.state.autoHideItemStyle}
+      globalItemStyle={this.state.globalItemStyle}
+      updateItemStyle={this.updateItemStyle} />;
+  })
   render() {
     return (
       <MainContainer>
         <nav>
           <Menu>
-            <div className="menu-item"><Title>CSS Grid Playground</Title></div>
+            <div className="menu-item">
+              <img src={process.env.PUBLIC_URL+'/swing.svg'} height="40" alt="CSS Grid Playground Logo"/>
+            </div>
             <div className="menu-item">
               <a className="github-button" href="https://github.com/purplecones/css-grid-playground" data-icon="octicon-star" data-style="mega" data-count-href="/purplecones/css-grid-playground/stargazers" data-count-api="/repos/purplecones/css-grid-playground#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star purplecones/css-grid-playground on GitHub">Star</a>
             </div>
@@ -112,8 +147,8 @@ grid-gap: 1rem;`,
                 onIncrease={this.incrementGridItems.bind(this, 1)}/>
             </PanelHeading>
             <TextArea
-              value={this.state.defaultGridItemStyle}
-              onChange={this.updateDefaultItemStyle}/>
+              value={this.state.globalItemStyle}
+              onChange={this.updateGlobalItemStyles}/>
           </div>
         </Controls>
         <GridContainer

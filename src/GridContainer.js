@@ -7,16 +7,10 @@ const Container = styled.div`
 
 class GridContainer extends React.Component {
   render() {
-    const childrenWithProps = React.Children.map(this.props.children,
-     (child) => React.cloneElement(child, {
-       autoHide: this.props.autoHideItemStyle,
-       gridItemColor: this.props.gridItemColor
-     })
-    );
     return (
       <Container
         gridContainerStyle={this.props.gridContainerStyle}>
-        {childrenWithProps}
+        {this.props.children}
       </Container>
     );
   }

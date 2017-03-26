@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import TextArea from './TextArea';
 
 const Item = styled.div`
-  background: ${(props) => props.color}
   transition: all 300ms ease-in-out;
   padding: .5rem;
   > textarea {
@@ -20,24 +19,21 @@ const Item = styled.div`
       opacity: 1;
     }
   }
-  ${props => props.defaultItemStyle}
+  ${props => props.globalItemStyle}
   ${props => props.itemStyle}
 `;
 
 class GridItem extends React.Component {
-  state = {
-    itemStyle: ``,
-  }
-  updateItemStyle = (value) => this.setState({ itemStyle: value})
+  updateItemStyle = (value) => this.props.updateItemStyle(this.props.index, value)
   render() {
     return (
       <Item
-        itemStyle={this.state.itemStyle}
         color={this.props.gridItemColor}
         autoHide={this.props.autoHide}
-        defaultItemStyle={this.props.defaultItemStyle}>
+        itemStyle={this.props.itemStyle}
+        globalItemStyle={this.props.globalItemStyle}>
         <TextArea
-          value={this.state.itemStyle}
+          value={this.props.itemStyle}
           onChange={this.updateItemStyle}/>
       </Item>
     );

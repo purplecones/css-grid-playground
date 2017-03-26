@@ -1,5 +1,5 @@
 {
-  "name": "css-grid",
+  "name": "css-grid-playground",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,12 +9,15 @@
     "styled-components": "^1.4.4"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "serve": "^5.0.1"
   },
   "scripts": {
+    "now-start": "cd build && serve -s ./",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "alias": "www.cssgridplayground.com"
 }
