@@ -110,6 +110,12 @@ const times = x => (f) => {
 };
 
 class App extends React.Component {
+  static propTypes = {
+    isCompatible: React.PropTypes.bool,
+  };
+  static defaultProps = {
+    isCompatible: false,
+  }
   state = {
     globalItemStyle,
     gridContainerStyle,
@@ -118,7 +124,7 @@ class App extends React.Component {
     autoHideItemStyle: false,
   }
   componentDidMount() {
-    if (checkCompatibility()) {
+    if (this.props.isCompatible || checkCompatibility()) {
       this.setState({ isCompatible: true }); /* eslint react/no-did-mount-set-state: "off" */
     }
     setTimeout(() => {
@@ -165,7 +171,7 @@ class App extends React.Component {
           <p>Meanwhile, here is a gif</p>
           <img
             style={{ width: '100vw' }}
-            src={`${process.env.PUBLIC_URL}/mobile-demo.gif`}
+            src={'/mobile-demo.gif'}
             alt="Demo GIF"
           />
         </div>
