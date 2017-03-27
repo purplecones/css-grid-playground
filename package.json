@@ -6,6 +6,7 @@
     "mobile-detect": "^1.3.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-test-renderer": "^15.4.2",
     "styled-components": "^1.4.4"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:cover": "yarn test -- --coverage && open coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
   },
   "alias": "www.cssgridplayground.com"

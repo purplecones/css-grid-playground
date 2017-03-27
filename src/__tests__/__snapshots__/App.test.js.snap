@@ -1,0 +1,229 @@
+exports[`test renders correctly on compatible device 1`] = `
+<div
+  className="hdKDHS">
+  <nav>
+    <div
+      className="fXHOfF">
+      <div
+        className="menu-item">
+        <h1
+          className="hNJzUA">
+          CSS Grid Playground
+        </h1>
+      </div>
+      <div
+        className="menu-item">
+        <a
+          aria-label="Star purplecones/css-grid-playground on GitHub"
+          className="github-button"
+          data-style="mega"
+          href="https://github.com/purplecones/css-grid-playground">
+          Star
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="ifEPSI">
+    <div>
+      <div
+        className="gGRckH">
+        <h3
+          className="gcdvDG">
+          Grid Container
+        </h3>
+      </div>
+      <textarea
+        className="kEAiXh"
+        onChange={[Function]}
+        value="display: grid;
+      grid-template-columns: 2fr 5fr 2fr;
+      grid-gap: 1rem;" />
+    </div>
+    <div>
+      <div
+        className="gGRckH">
+        <h3
+          className="gcdvDG">
+          Grid Items
+        </h3>
+        <div>
+          <button
+            className="czOWQi"
+            onClick={[Function]}>
+            👆
+          </button>
+          <button
+            className="czOWQi"
+            onClick={[Function]}>
+            👇
+          </button>
+          <button
+            className="czOWQi"
+            onClick={[Function]}>
+            👋
+          </button>
+          <button
+            className="czOWQi"
+            onClick={[Function]}>
+            👀
+          </button>
+        </div>
+      </div>
+      <textarea
+        className="kEAiXh"
+        onChange={[Function]}
+        value="background: lightsalmon;" />
+    </div>
+  </div>
+  <div
+    className="bmrzHG">
+    <div
+      className="ezgUIL">
+      <textarea
+        className="kEAiXh"
+        onChange={[Function]}
+        value="grid-row: span 8;" />
+      <div
+        className="iuomSm">
+        <div
+          className="dxpgzB">
+          1
+        </div>
+      </div>
+    </div>
+    <div
+      className="gkRuza">
+      <textarea
+        className="kEAiXh"
+        onChange={[Function]}
+        value="grid-column: 2 / 4;" />
+      <div
+        className="iuomSm">
+        <div
+          className="dxpgzB">
+          2
+        </div>
+      </div>
+    </div>
+    <div
+      className="evCaSB">
+      <textarea
+        className="kEAiXh"
+        onChange={[Function]}
+        value="grid-row: span 9;" />
+      <div
+        className="iuomSm">
+        <div
+          className="dxpgzB">
+          3
+        </div>
+      </div>
+    </div>
+    <div
+      className="evCaSB">
+      <textarea
+        className="kEAiXh"
+        onChange={[Function]}
+        value="grid-row: span 9;" />
+      <div
+        className="iuomSm">
+        <div
+          className="dxpgzB">
+          4
+        </div>
+      </div>
+    </div>
+    <div
+      className="ljbjis">
+      <textarea
+        className="kEAiXh"
+        onChange={[Function]}
+        value="height: 100px;" />
+      <div
+        className="iuomSm">
+        <div
+          className="dxpgzB">
+          5
+        </div>
+      </div>
+    </div>
+    <div
+      className="gQhNLU">
+      <textarea
+        className="kEAiXh"
+        onChange={[Function]}
+        value="" />
+      <div
+        className="iuomSm">
+        <div
+          className="dxpgzB">
+          6
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders correctly on incompatible device 1`] = `
+<div
+  style={
+    Object {
+      "margin": "10px",
+    }
+  }>
+  <p>
+    CSS Grid Layout is cutting edge so it is not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. ☕️
+  </p>
+  <p>
+    More info at: 
+    <a
+      href="http://caniuse.com/#feat=css-grid">
+      http://caniuse.com/#feat=css-grid
+    </a>
+  </p>
+  <p>
+    Meanwhile, here is a gif
+  </p>
+  <img
+    alt="Demo GIF"
+    src="/mobile-demo.gif"
+    style={
+      Object {
+        "width": "100vw",
+      }
+    } />
+</div>
+`;
+
+exports[`test renders correctly on test runner as incompatible 1`] = `
+<div
+  style={
+    Object {
+      "margin": "10px",
+    }
+  }>
+  <p>
+    CSS Grid Layout is cutting edge so it is not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. ☕️
+  </p>
+  <p>
+    More info at: 
+    <a
+      href="http://caniuse.com/#feat=css-grid">
+      http://caniuse.com/#feat=css-grid
+    </a>
+  </p>
+  <p>
+    Meanwhile, here is a gif
+  </p>
+  <img
+    alt="Demo GIF"
+    src="/mobile-demo.gif"
+    style={
+      Object {
+        "width": "100vw",
+      }
+    } />
+</div>
+`;

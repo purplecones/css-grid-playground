@@ -1,0 +1,7 @@
+exports[`test renders correctly 1`] = `
+<textarea
+  className="kEAiXh"
+  onChange={[Function]}
+  value="background: red;
+width: 100px;" />
+`;

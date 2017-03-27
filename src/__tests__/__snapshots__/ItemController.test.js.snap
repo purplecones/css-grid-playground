@@ -1,0 +1,24 @@
+exports[`test renders correctly 1`] = `
+<div>
+  <button
+    className="czOWQi"
+    onClick={null}>
+    👆
+  </button>
+  <button
+    className="czOWQi"
+    onClick={null}>
+    👇
+  </button>
+  <button
+    className="czOWQi"
+    onClick={null}>
+    👋
+  </button>
+  <button
+    className="czOWQi"
+    onClick={null}>
+    👀
+  </button>
+</div>
+`;

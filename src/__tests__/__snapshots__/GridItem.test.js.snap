@@ -1,0 +1,67 @@
+exports[`test renders correctly as item 1 1`] = `
+<div
+  className="coFoVp">
+  <textarea
+    className="kEAiXh"
+    onChange={[Function]}
+    value="background: red;" />
+  <div
+    className="iFZNxF">
+    <div
+      className="dxpgzB">
+      1
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders correctly as item 2 1`] = `
+<div
+  className="coFoVp">
+  <textarea
+    className="kEAiXh"
+    onChange={[Function]}
+    value="background: red;" />
+  <div
+    className="iFZNxF">
+    <div
+      className="dxpgzB">
+      2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders grid item with auto hide 1`] = `
+<div
+  className="hWwHNT">
+  <textarea
+    className="kEAiXh"
+    onChange={[Function]}
+    value="" />
+  <div
+    className="iFZNxF">
+    <div
+      className="dxpgzB">
+      2
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test renders grid item without auto hide 1`] = `
+<div
+  className="hWwHNT">
+  <textarea
+    className="kEAiXh"
+    onChange={[Function]}
+    value="" />
+  <div
+    className="iFZNxF">
+    <div
+      className="dxpgzB">
+      2
+    </div>
+  </div>
+</div>
+`;
