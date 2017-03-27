@@ -5,16 +5,20 @@ const Container = styled.div`
   ${props => props.gridContainerStyle}
 `;
 
-class GridContainer extends React.Component {
-  render() {
-    return (
-      <Container
-        gridContainerStyle={this.props.gridContainerStyle}>
-        {this.props.children}
-      </Container>
-    );
-  }
+const GridContainer = props => (
+  <Container gridContainerStyle={props.gridContainerStyle}>
+    {props.children}
+  </Container>
+);
 
-}
+GridContainer.propTypes = {
+  gridContainerStyle: React.PropTypes.string,
+  children: React.PropTypes.node,
+};
+
+GridContainer.defaultProps = {
+  gridContainerStyle: '',
+  children: null,
+};
 
 export default GridContainer;

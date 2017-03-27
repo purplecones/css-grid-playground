@@ -13,25 +13,30 @@ const TextAreaField = styled.textarea`
   @media (max-width: 600px) {
     font-size: .75rem;
   }
-  ${(props) => props.styling}
+  ${props => props.styling}
 `;
 
 class TextArea extends React.Component {
-  defaultProps = {
-    type: 'text',
+  static propTypes = {
+    styling: React.PropTypes.string,
+    value: React.PropTypes.string,
+    onChange: React.PropTypes.func,
+  };
+  static defaultProps = {
+    styling: '',
+    value: '',
+    onChange: null,
   }
-  handleChange = (e) => this.props.onChange(e.target.value)
+  handleChange = e => this.props.onChange(e.target.value)
   render() {
     return (
       <TextAreaField
         styling={this.props.styling}
         value={this.props.value}
-        type={this.props.type}
         onChange={this.handleChange}
       />
     );
   }
-
 }
 
 export default TextArea;

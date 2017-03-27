@@ -9,7 +9,7 @@ const Item = styled.div`
   > textarea {
     transition: all 300ms ease-in-out;
     transition-delay: 500ms;
-    opacity: ${props => props.autoHide ? 0 : 1};
+    opacity: ${props => (props.autoHide ? 0 : 1)};
   }
   &:hover {
     outline: 1px dashed lightgray;
@@ -40,7 +40,7 @@ const ItemNumberContainer = styled.div`
   pointer-events: none;
   transition: all 300ms ease-in-out;
   transition-delay: 500ms;
-  opacity: ${props => props.autoHide ? 0 : 1};
+  opacity: ${props => (props.autoHide ? 0 : 1)};
 `;
 
 const ItemNumber = styled.div`
@@ -50,19 +50,34 @@ const ItemNumber = styled.div`
 `;
 
 class GridItem extends React.Component {
-  updateItemStyle = (value) => this.props.updateItemStyle(this.props.index, value)
+  static propTypes = {
+    autoHide: React.PropTypes.bool,
+    itemStyle: React.PropTypes.string,
+    globalItemStyle: React.PropTypes.string,
+    updateItemStyle: React.PropTypes.func,
+    itemNumber: React.PropTypes.number,
+  };
+  static defaultProps = {
+    autoHide: true,
+    itemStyle: '',
+    globalItemStyle: '',
+    updateItemStyle: null,
+    itemNumber: null,
+  };
+  updateItemStyle = value => this.props.updateItemStyle(this.props.itemNumber, value)
   render() {
     return (
       <Item
-        color={this.props.gridItemColor}
         autoHide={this.props.autoHide}
         itemStyle={this.props.itemStyle}
-        globalItemStyle={this.props.globalItemStyle}>
+        globalItemStyle={this.props.globalItemStyle}
+      >
         <TextArea
           value={this.props.itemStyle}
-          onChange={this.updateItemStyle}/>
+          onChange={this.updateItemStyle}
+        />
         <ItemNumberContainer autoHide={this.props.autoHide}>
-          <ItemNumber>{this.props.index + 1}</ItemNumber>
+          <ItemNumber>{this.props.itemNumber + 1}</ItemNumber>
         </ItemNumberContainer>
       </Item>
     );

@@ -80,18 +80,36 @@ grid-template-columns: 2fr 5fr 2fr;
 grid-gap: 1rem;`;
 
 const defaultItemStyles = [
-`grid-row: span 8;`,
-`grid-column: 2 / 4;`,
-`grid-row: span 9;`,
-`grid-row: span 9;`,
-'height: 100px;',
-'',
+  'grid-row: span 8;',
+  'grid-column: 2 / 4;',
+  'grid-row: span 9;',
+  'grid-row: span 9;',
+  'height: 100px;',
+  '',
 ];
 
 const globalItemStyle =
-`background: lightsalmon;`;
+'background: lightsalmon;';
 
-class Interactive extends React.Component {
+const checkCompatibility = () => {
+  const md = new MobileDetect(window.navigator.userAgent);
+  if (md.is('iOS')) return false; // 2. need to add this in interim to detect all iOS devices
+
+  if (md.version('Firefox') >= 52 || // 1. chrome on ios for some reason matched v52 so this checks passes.
+    md.version('Chrome') >= 57) {
+    return true;
+  }
+  return false;
+};
+
+const times = x => (f) => {
+  if (x > 0) {
+    f();
+    times(x - 1)(f);
+  }
+};
+
+class App extends React.Component {
   state = {
     globalItemStyle,
     gridContainerStyle,
@@ -99,7 +117,14 @@ class Interactive extends React.Component {
     numberOfGridItems: 6,
     autoHideItemStyle: false,
   }
-  updateAutoItemHide = () => this.setState({ autoHideItemStyle: !this.state.autoHideItemStyle })
+  componentDidMount() {
+    if (checkCompatibility()) {
+      this.setState({ isCompatible: true }); /* eslint react/no-did-mount-set-state: "off" */
+    }
+    setTimeout(() => {
+      this.setState({ autoHideItemStyle: true });
+    }, 2000);
+  }
   updateGridContainerStyle = value => this.setState({ gridContainerStyle: value })
   updateGlobalItemStyles = value => this.setState({ globalItemStyle: value })
   updateItemStyle = (itemIndex, value) => {
@@ -110,38 +135,41 @@ class Interactive extends React.Component {
     });
   }
   resetStyles = () => this.setState({ itemStyles: [] })
-  incrementGridItems = value => this.setState({ numberOfGridItems: this.state.numberOfGridItems + value })
-  renderGridItems = () => [...Array(this.state.numberOfGridItems)].map((_, key) => {
-    const itemStyle = this.state.itemStyles[key] ? this.state.itemStyles[key] : '';
-    return <GridItem
-      key={key}
-      index={key}
-      itemStyle={itemStyle}
-      autoHide={this.state.autoHideItemStyle}
-      globalItemStyle={this.state.globalItemStyle}
-      updateItemStyle={this.updateItemStyle} />;
+  updateAutoItemHide = () => this.setState({ autoHideItemStyle: !this.state.autoHideItemStyle })
+  incrementGridItems = () => this.setState({
+    numberOfGridItems: this.state.numberOfGridItems + 1,
   })
-  componentDidMount() {
-    const md = new MobileDetect(window.navigator.userAgent);
-    if (checkCompatibility()) {
-      this.setState({ isCompatible: true });
-    }
-    setTimeout(() => {
-      this.setState({ autoHideItemStyle: true });
-    }, 2000);
-  }
+  decrementGridItems = () => this.setState({
+    numberOfGridItems: this.state.numberOfGridItems - 1,
+  })
+  renderGridItems = () => [...Array(this.state.numberOfGridItems)].map((_, i) => {
+    const itemStyle = this.state.itemStyles[i] ? this.state.itemStyles[i] : '';
+    return (
+      <GridItem
+        key={i}  /* eslint react/no-array-index-key: "off" */
+        itemNumber={i}
+        itemStyle={itemStyle}
+        autoHide={this.state.autoHideItemStyle}
+        globalItemStyle={this.state.globalItemStyle}
+        updateItemStyle={this.updateItemStyle}
+      />
+    );
+  })
+
   render() {
     if (!this.state.isCompatible) {
       return (
-        <div style={{ margin: '10px'}}>
-          <p>CSS Grid Layout is cutting edge so it's not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. ☕️</p>
+        <div style={{ margin: '10px' }}>
+          <p>CSS Grid Layout is cutting edge so it is not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. ☕️</p>
           <p>More info at: <a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
           <p>Meanwhile, here is a gif</p>
-          <img style={{ width: '100vw' }}
-            src={process.env.PUBLIC_URL + '/mobile-demo.gif'}
-            alt="Demo GIF"/>
+          <img
+            style={{ width: '100vw' }}
+            src={`${process.env.PUBLIC_URL}/mobile-demo.gif`}
+            alt="Demo GIF"
+          />
         </div>
-      );
+      ); /* eslint max-len: "off" */
     }
     return (
       <MainContainer>
@@ -162,7 +190,8 @@ class Interactive extends React.Component {
             </PanelHeading>
             <TextArea
               value={this.state.gridContainerStyle}
-              onChange={this.updateGridContainerStyle}/>
+              onChange={this.updateGridContainerStyle}
+            />
           </div>
           <div>
             <PanelHeading>
@@ -170,42 +199,26 @@ class Interactive extends React.Component {
               <ItemController
                 onHideStyle={this.updateAutoItemHide}
                 onReset={this.resetStyles}
-                onDecrease={this.incrementGridItems.bind(this, -1)}
-                onIncrease={this.incrementGridItems.bind(this, 1)}/>
+                onDecrease={this.incrementGridItems}
+                onIncrease={this.decrementGridItems}
+              />
             </PanelHeading>
             <TextArea
               value={this.state.globalItemStyle}
-              onChange={this.updateGlobalItemStyles}/>
+              onChange={this.updateGlobalItemStyles}
+            />
           </div>
         </Controls>
         <GridContainer
           autoHideItemStyle={this.state.autoHideItemStyle}
           gridItemColor={this.state.gridItemColor}
-          gridContainerStyle={this.state.gridContainerStyle}>
-            {this.renderGridItems()}
+          gridContainerStyle={this.state.gridContainerStyle}
+        >
+          {this.renderGridItems()}
         </GridContainer>
       </MainContainer>
     );
   }
-
 }
 
-const checkCompatibility = () => {
-  const md = new MobileDetect(window.navigator.userAgent);
-  if (md.is('iOS')) return false; // 2. need to add this in interim to detect all iOS devices
-
-  if (md.version('Firefox') >= 52 || // 1. chrome on ios for some reason matched v52 so this checks passes.
-    md.version('Chrome') >= 57) {
-    return true;
-  }
-  return false;
-};
-
-const times = x => f => {
-  if (x > 0) {
-    f()
-    times (x - 1) (f)
-  }
-};
-
-export default Interactive;
+export default App;

@@ -17,18 +17,28 @@ const Button = styled.button`
     margin: 0 5px 0 10px;
   }
 `;
-class ItemController extends React.Component {
-  render() {
-    return (
-      <div>
-        <Button onClick={this.props.onIncrease}>👆</Button>
-        <Button onClick={this.props.onDecrease}>👇</Button>
-        <Button onClick={this.props.onReset}>👋</Button>
-        <Button onClick={this.props.onHideStyle}>👀</Button>
-      </div>
-    );
-  }
 
-}
+const ItemController = props => (
+  <div>
+    <Button onClick={props.onIncrease}>👆</Button>
+    <Button onClick={props.onDecrease}>👇</Button>
+    <Button onClick={props.onReset}>👋</Button>
+    <Button onClick={props.onHideStyle}>👀</Button>
+  </div>
+);
+
+ItemController.propTypes = {
+  onIncrease: React.PropTypes.func,
+  onDecrease: React.PropTypes.func,
+  onReset: React.PropTypes.func,
+  onHideStyle: React.PropTypes.func,
+};
+
+ItemController.defaultProps = {
+  onIncrease: null,
+  onDecrease: null,
+  onReset: null,
+  onHideStyle: null,
+};
 
 export default ItemController;
