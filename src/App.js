@@ -113,7 +113,7 @@ class Interactive extends React.Component {
     gridContainerStyle,
     itemStyles: defaultItemStyles,
     numberOfGridItems: 7,
-    autoHideItemStyle: true,
+    autoHideItemStyle: false,
   }
   updateAutoItemHide = () => this.setState({ autoHideItemStyle: !this.state.autoHideItemStyle })
   updateGridContainerStyle = value => this.setState({ gridContainerStyle: value })
@@ -142,13 +142,20 @@ class Interactive extends React.Component {
     if (md.mobile()) {
       this.setState({ isIncompatible: true });
     }
+    setTimeout(() => {
+      this.setState({ autoHideItemStyle: true });
+    }, 2000);
   }
   render() {
     if (this.state.isIncompatible) {
       return (
         <div style={{ margin: '10px'}}>
-          <p>CSS Grid Layout does not work on your device yet. Come back on a desktop running Chrome 57 or Firefox 52. 🍻</p>
-          <p><a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
+          <p>CSS Grid Layout is cutting edge so it does not work on mobile devices yet. Come back on a desktop running at least Chrome 57 or Firefox 52. 🍻</p>
+          <p>More info at: <a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
+          <p>Meanwhile, here is a gif</p>
+          <img style={{ width: '100vw' }}
+            src={process.env.PUBLIC_URL + '/mobile-demo.gif'}
+            alt="Demo GIF"/>
         </div>
       );
     }
