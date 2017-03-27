@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import MobileDetect from 'mobile-detect';
-import Input from './Input';
 import GridContainer from './GridContainer';
 import GridItem from './GridItem';
 import TextArea from './TextArea';
@@ -93,17 +92,6 @@ height: 100px;
 justify-self: center;`
 ];
 
-const Logo = styled.a`
-  > img {
-    height: 40px;
-  }
-  @media (max-width: 600px) {
-    > img {
-      height: 25px;
-    }
-  }
-`;
-
 const globalItemStyle =
 `background: lightsalmon;`;
 
@@ -133,24 +121,24 @@ class Interactive extends React.Component {
       key={key}
       index={key}
       itemStyle={itemStyle}
-      autoHide= {this.state.autoHideItemStyle}
+      autoHide={this.state.autoHideItemStyle}
       globalItemStyle={this.state.globalItemStyle}
       updateItemStyle={this.updateItemStyle} />;
   })
   componentDidMount() {
     const md = new MobileDetect(window.navigator.userAgent);
-    if (md.mobile()) {
-      this.setState({ isIncompatible: true });
+    if (checkCompatibility()) {
+      this.setState({ isCompatible: true });
     }
     setTimeout(() => {
       this.setState({ autoHideItemStyle: true });
     }, 2000);
   }
   render() {
-    if (this.state.isIncompatible) {
+    if (!this.state.isCompatible) {
       return (
         <div style={{ margin: '10px'}}>
-          <p>CSS Grid Layout is cutting edge so it does not work on mobile devices yet. Come back on a desktop running at least Chrome 57 or Firefox 52. 🍻</p>
+          <p>CSS Grid Layout is cutting edge so it's not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. 🍻</p>
           <p>More info at: <a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
           <p>Meanwhile, here is a gif</p>
           <img style={{ width: '100vw' }}
@@ -206,11 +194,22 @@ class Interactive extends React.Component {
 
 }
 
+const checkCompatibility = () => {
+  const md = new MobileDetect(window.navigator.userAgent);
+  if (md.is('iOS')) return false; // 2. need to add this in interim to detect all iOS devices
+
+  if (md.version('Firefox') >= 52 || // 1. chrome on ios for some reason matched v52 so this checks passes.
+    md.version('Chrome') >= 57) {
+    return true;
+  }
+  return false;
+};
+
 const times = x => f => {
   if (x > 0) {
     f()
     times (x - 1) (f)
   }
-}
+};
 
 export default Interactive;
