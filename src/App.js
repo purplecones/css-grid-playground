@@ -86,10 +86,6 @@ const defaultItemStyles = [
 `grid-row: span 9;`,
 'height: 100px;',
 '',
-`grid-column: span 3;
-width: 300px;
-height: 100px;
-justify-self: center;`
 ];
 
 const globalItemStyle =
@@ -100,7 +96,7 @@ class Interactive extends React.Component {
     globalItemStyle,
     gridContainerStyle,
     itemStyles: defaultItemStyles,
-    numberOfGridItems: 7,
+    numberOfGridItems: 6,
     autoHideItemStyle: false,
   }
   updateAutoItemHide = () => this.setState({ autoHideItemStyle: !this.state.autoHideItemStyle })
@@ -138,7 +134,7 @@ class Interactive extends React.Component {
     if (!this.state.isCompatible) {
       return (
         <div style={{ margin: '10px'}}>
-          <p>CSS Grid Layout is cutting edge so it's not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. 🍻</p>
+          <p>CSS Grid Layout is cutting edge so it's not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. ☕️</p>
           <p>More info at: <a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
           <p>Meanwhile, here is a gif</p>
           <img style={{ width: '100vw' }}
