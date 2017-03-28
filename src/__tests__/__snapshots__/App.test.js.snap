@@ -174,17 +174,17 @@ exports[`test renders correctly on incompatible device 1`] = `
     }
   }>
   <p>
-    CSS Grid Layout is cutting edge so it is not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. ☕️
+    CSS Grid Layout is still fairly new so it is not supported by your browser yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
   </p>
   <p>
-    More info at: 
+    More support info at: 
     <a
       href="http://caniuse.com/#feat=css-grid">
       http://caniuse.com/#feat=css-grid
     </a>
   </p>
   <p>
-    Meanwhile, here is a gif
+    Meanwhile, here is a gif...
   </p>
   <img
     alt="Demo GIF"
@@ -205,17 +205,17 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
     }
   }>
   <p>
-    CSS Grid Layout is cutting edge so it is not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. ☕️
+    CSS Grid Layout is still fairly new so it is not supported by your browser yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
   </p>
   <p>
-    More info at: 
+    More support info at: 
     <a
       href="http://caniuse.com/#feat=css-grid">
       http://caniuse.com/#feat=css-grid
     </a>
   </p>
   <p>
-    Meanwhile, here is a gif
+    Meanwhile, here is a gif...
   </p>
   <img
     alt="Demo GIF"
