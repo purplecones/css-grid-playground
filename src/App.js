@@ -5,7 +5,7 @@ import GridItem from './GridItem';
 import TextArea from './TextArea';
 import ItemController from './ItemController';
 import { isValidCss, checkCompatibility } from './utils';
-import useragent from 'useragent';
+
 const MainContainer = styled.div`
   width: 100%;
   height: 100%;
