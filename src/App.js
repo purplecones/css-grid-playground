@@ -93,7 +93,11 @@ const globalItemStyle =
 
 const checkCompatibility = () => {
   const md = new MobileDetect(window.navigator.userAgent);
-  if (md.version('iOS') >= 10.3) return true;
+  if (md.version('iOS') >= 10.3) {
+    return true;
+  } else if (md.is('iOS')) { // 2. need to add this in interim to detect all iOS devices
+    return false;
+  }
 
   if (md.version('Firefox') >= 52 || // 1. chrome on ios for some reason matched v52 so this checks passes.
     md.version('Chrome') >= 57 ||
