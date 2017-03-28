@@ -35,10 +35,10 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
       <textarea
         className="kEAiXh"
-        onChange={[Function]}
-        value="display: grid;
+        defaultValue="display: grid;
       grid-template-columns: 2fr 5fr 2fr;
-      grid-gap: 1rem;" />
+      grid-gap: 1rem;"
+        onChange={[Function]} />
     </div>
     <div>
       <div
@@ -72,8 +72,8 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
       <textarea
         className="kEAiXh"
-        onChange={[Function]}
-        value="background: lightsalmon;" />
+        defaultValue="background: lightsalmon;"
+        onChange={[Function]} />
     </div>
   </div>
   <div
@@ -82,8 +82,8 @@ exports[`test renders correctly on compatible device 1`] = `
       className="ezgUIL">
       <textarea
         className="kEAiXh"
-        onChange={[Function]}
-        value="grid-row: span 8;" />
+        defaultValue="grid-row: span 8;"
+        onChange={[Function]} />
       <div
         className="iuomSm">
         <div
@@ -96,8 +96,8 @@ exports[`test renders correctly on compatible device 1`] = `
       className="gkRuza">
       <textarea
         className="kEAiXh"
-        onChange={[Function]}
-        value="grid-column: 2 / 4;" />
+        defaultValue="grid-column: 2 / 4;"
+        onChange={[Function]} />
       <div
         className="iuomSm">
         <div
@@ -110,8 +110,8 @@ exports[`test renders correctly on compatible device 1`] = `
       className="evCaSB">
       <textarea
         className="kEAiXh"
-        onChange={[Function]}
-        value="grid-row: span 9;" />
+        defaultValue="grid-row: span 9;"
+        onChange={[Function]} />
       <div
         className="iuomSm">
         <div
@@ -124,8 +124,8 @@ exports[`test renders correctly on compatible device 1`] = `
       className="evCaSB">
       <textarea
         className="kEAiXh"
-        onChange={[Function]}
-        value="grid-row: span 9;" />
+        defaultValue="grid-row: span 9;"
+        onChange={[Function]} />
       <div
         className="iuomSm">
         <div
@@ -138,8 +138,8 @@ exports[`test renders correctly on compatible device 1`] = `
       className="ljbjis">
       <textarea
         className="kEAiXh"
-        onChange={[Function]}
-        value="height: 100px;" />
+        defaultValue="height: 100px;"
+        onChange={[Function]} />
       <div
         className="iuomSm">
         <div
@@ -152,8 +152,8 @@ exports[`test renders correctly on compatible device 1`] = `
       className="gQhNLU">
       <textarea
         className="kEAiXh"
-        onChange={[Function]}
-        value="" />
+        defaultValue=""
+        onChange={[Function]} />
       <div
         className="iuomSm">
         <div

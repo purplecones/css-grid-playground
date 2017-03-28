@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import MobileDetect from 'mobile-detect';
 import GridContainer from './GridContainer';
 import GridItem from './GridItem';
 import TextArea from './TextArea';
 import ItemController from './ItemController';
+import { isValidCss, checkCompatibility } from './utils';
 
 const MainContainer = styled.div`
   width: 100%;
@@ -74,7 +74,7 @@ const Title = styled.h1`
   }
 `;
 
-const gridContainerStyle =
+const defaultContainerStyle =
 `display: grid;
 grid-template-columns: 2fr 5fr 2fr;
 grid-gap: 1rem;`;
@@ -88,31 +88,8 @@ const defaultItemStyles = [
   '',
 ];
 
-const globalItemStyle =
+const defaultGlobalItemStyle =
 'background: lightsalmon;';
-
-const checkCompatibility = () => {
-  const md = new MobileDetect(window.navigator.userAgent);
-  if (md.version('iOS') >= 10.3) {
-    return true;
-  } else if (md.is('iOS')) { // 2. need to add this in interim to detect all iOS devices
-    return false;
-  }
-
-  if (md.version('Firefox') >= 52 || // 1. chrome on ios for some reason matched v52 so this checks passes.
-    md.version('Chrome') >= 57 ||
-    md.version('Safari') >= 10.1) {
-    return true;
-  }
-  return false;
-};
-
-const times = x => (f) => {
-  if (x > 0) {
-    f();
-    times(x - 1)(f);
-  }
-};
 
 class App extends React.Component {
   static propTypes = {
@@ -122,8 +99,8 @@ class App extends React.Component {
     isCompatible: false,
   }
   state = {
-    globalItemStyle,
-    gridContainerStyle,
+    globalItemStyle: defaultGlobalItemStyle,
+    gridContainerStyle: defaultContainerStyle,
     itemStyles: defaultItemStyles,
     numberOfGridItems: 6,
     autoHideItemStyle: false,
@@ -136,8 +113,12 @@ class App extends React.Component {
       this.setState({ autoHideItemStyle: true });
     }, 2000);
   }
-  updateGridContainerStyle = value => this.setState({ gridContainerStyle: value })
-  updateGlobalItemStyles = value => this.setState({ globalItemStyle: value })
+  updateGridContainerStyle = (value) => {
+    if (isValidCss(value)) this.setState({ gridContainerStyle: value });
+  }
+  updateGlobalItemStyles = (value) => {
+    if (isValidCss(value)) this.setState({ globalItemStyle: value });
+  }
   updateItemStyle = (itemIndex, value) => {
     const itemStyles = [...this.state.itemStyles];
     itemStyles[itemIndex] = value;
@@ -200,7 +181,7 @@ class App extends React.Component {
               <Header>Grid Container</Header>
             </PanelHeading>
             <TextArea
-              value={this.state.gridContainerStyle}
+              defaultValue={defaultContainerStyle}
               onChange={this.updateGridContainerStyle}
             />
           </div>
@@ -215,7 +196,7 @@ class App extends React.Component {
               />
             </PanelHeading>
             <TextArea
-              value={this.state.globalItemStyle}
+              defaultValue={defaultGlobalItemStyle}
               onChange={this.updateGlobalItemStyles}
             />
           </div>
