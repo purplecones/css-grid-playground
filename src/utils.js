@@ -1,4 +1,4 @@
-import MobileDetect from 'mobile-detect';
+import useragent from 'useragent';
 
 const isValidCss = (input) => {
   const lines = input.split(/\r\n|\r|\n/);
@@ -20,25 +20,34 @@ const isValidCss = (input) => {
       if (char === ']' && stack[stack.length - 1] === '[') stack.pop();
     }
   }
-  const matchinPairsCheck = stack.length === 0;
+  const matchingPairsCheck = stack.length === 0;
 
-  return semiColonCheck && endingWithSemiColonCheck && matchinPairsCheck;
+  return semiColonCheck && endingWithSemiColonCheck && matchingPairsCheck;
 };
 
-const checkCompatibility = () => {
-  const md = new MobileDetect(window.navigator.userAgent);
-  if (md.version('iOS') >= 10.3) {
-    return true;
-  } else if (md.is('iOS')) { // 2. need to add this in interim to detect all iOS devices
-    return false;
+const checkCompatibility = () => { /* eslint consistent-return: "off" */
+  const agent = useragent.parse(window.navigator.userAgent);
+  // show agent info in the browser for support
+  console.log(agent); /* eslint no-console: "off" */
+  switch (agent.family) {
+    case 'Chrome':
+      if (parseInt(agent.major, 10) >= 57) return true;
+      break;
+    case 'Firefox':
+      if (parseInt(agent.major, 10) >= 52) return true;
+      break;
+    case 'Safari':
+      if (parseInt(agent.major, 10) >= 10 && parseInt(agent.minor, 10) >= 1) return true;
+      break;
+    case 'Mobile Safari':
+      if (parseInt(agent.os.major, 10) >= 10 && parseInt(agent.os.minor, 10) >= 3) return true;
+      break;
+    case 'Opera':
+      if (parseInt(agent.major, 10) >= 44) return true;
+      break;
+    default:
+      return false;
   }
-
-  if (md.version('Firefox') >= 52 || // 1. chrome on ios for some reason matched v52 so this checks passes.
-    md.version('Chrome') >= 57 ||
-    md.version('Safari') >= 10.1) {
-    return true;
-  }
-  return false;
 };
 
 const times = x => (f) => {

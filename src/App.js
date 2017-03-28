@@ -5,7 +5,7 @@ import GridItem from './GridItem';
 import TextArea from './TextArea';
 import ItemController from './ItemController';
 import { isValidCss, checkCompatibility } from './utils';
-
+import useragent from 'useragent';
 const MainContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -152,9 +152,9 @@ class App extends React.Component {
     if (!this.state.isCompatible) {
       return (
         <div style={{ margin: '10px' }}>
-          <p>CSS Grid Layout is cutting edge so it is not supported by your browser yet. For now, come back on at least Chrome 57 or Firefox 52. ☕️</p>
-          <p>More info at: <a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
-          <p>Meanwhile, here is a gif</p>
+          <p>CSS Grid Layout is still fairly new so it is not supported by your browser yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️</p>
+          <p>More support info at: <a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
+          <p>Meanwhile, here is a gif...</p>
           <img
             style={{ width: '100vw' }}
             src={'/mobile-demo.gif'}
@@ -165,6 +165,7 @@ class App extends React.Component {
     }
     return (
       <MainContainer>
+        {useragent.parse(window.navigator.userAgent).source}
         <nav>
           <Menu>
             <div className="menu-item">
