@@ -4,11 +4,14 @@ import GridContainer from './GridContainer';
 import GridItem from './GridItem';
 import TextArea from './TextArea';
 import ItemController from './ItemController';
-import { isValidCss, checkCompatibility } from './utils';
+import { isValidCss, checkCompatibility, isSafari, getAgent } from './utils';
 
-const MainContainer = styled.div`
+const Layout = styled.div`
   width: 100%;
   height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 4fr 50vh;
 `;
 
 const PanelHeading = styled.div`
@@ -33,13 +36,7 @@ const Controls = styled.div`
   grid-gap: .5rem;
   @media (max-width: 600px) {
     height: 20rem;
-  }
-  > div {
-    margin: .5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    ${isSafari() ? 'height: 25rem;' : null}
   }
   textarea {
     width: 100%;
@@ -47,6 +44,15 @@ const Controls = styled.div`
     padding: .5rem;
     background: #efefef;
   }
+`;
+
+const ControlSection = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: .5rem;
+  ${isSafari() ? 'margin-bottom: 4rem;' : null}
 `;
 
 const Menu = styled.div`
@@ -89,7 +95,9 @@ const defaultItemStyles = [
 ];
 
 const defaultGlobalItemStyle =
-'background: lightsalmon;';
+`background: lightsalmon;
+border: 2px solid black;
+`;
 
 class App extends React.Component {
   static propTypes = {
@@ -170,8 +178,10 @@ class App extends React.Component {
 
   render() {
     if (!this.state.isCompatible) {
+      const agent = getAgent();
       return (
         <div style={{ margin: '10px' }}>
+          <p>You are running on: {`${agent.family} ${agent.major}.${agent.minor} / ${agent.os.family} ${agent.os.major}.${agent.os.minor}`}</p>
           <p>CSS Grid Layout is still fairly new so it is not supported by your browser yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️</p>
           <p>More support info at: <a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
           <p>Meanwhile, here is a gif...</p>
@@ -184,7 +194,7 @@ class App extends React.Component {
       ); /* eslint max-len: "off" */
     }
     return (
-      <MainContainer>
+      <Layout>
         <nav>
           <Menu>
             <div className="menu-item">
@@ -196,7 +206,7 @@ class App extends React.Component {
           </Menu>
         </nav>
         <Controls>
-          <div>
+          <ControlSection>
             <PanelHeading>
               <Header>Grid Container</Header>
             </PanelHeading>
@@ -204,8 +214,8 @@ class App extends React.Component {
               value={this.state.gridContainerStyleText}
               onChange={this.updateGridContainerStyle}
             />
-          </div>
-          <div>
+          </ControlSection>
+          <ControlSection>
             <PanelHeading>
               <Header>Grid Items</Header>
               <ItemController
@@ -219,7 +229,7 @@ class App extends React.Component {
               value={this.state.globalItemStyleText}
               onChange={this.updateGlobalItemStyles}
             />
-          </div>
+          </ControlSection>
         </Controls>
         <GridContainer
           autoHideItemStyle={this.state.autoHideItemStyle}
@@ -228,7 +238,7 @@ class App extends React.Component {
         >
           {this.renderGridItems()}
         </GridContainer>
-      </MainContainer>
+      </Layout>
     );
   }
 }
