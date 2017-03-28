@@ -165,7 +165,6 @@ class App extends React.Component {
     }
     return (
       <MainContainer>
-        {useragent.parse(window.navigator.userAgent).source}
         <nav>
           <Menu>
             <div className="menu-item">
