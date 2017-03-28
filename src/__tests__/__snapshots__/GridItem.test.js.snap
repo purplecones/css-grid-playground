@@ -3,8 +3,8 @@ exports[`test renders correctly as item 1 1`] = `
   className="coFoVp">
   <textarea
     className="kEAiXh"
-    defaultValue="background: red;"
-    onChange={[Function]} />
+    onChange={[Function]}
+    value="" />
   <div
     className="iFZNxF">
     <div
@@ -20,8 +20,8 @@ exports[`test renders correctly as item 2 1`] = `
   className="coFoVp">
   <textarea
     className="kEAiXh"
-    defaultValue="background: red;"
-    onChange={[Function]} />
+    onChange={[Function]}
+    value="" />
   <div
     className="iFZNxF">
     <div
@@ -37,8 +37,8 @@ exports[`test renders grid item with auto hide 1`] = `
   className="hWwHNT">
   <textarea
     className="kEAiXh"
-    defaultValue=""
-    onChange={[Function]} />
+    onChange={[Function]}
+    value="" />
   <div
     className="iFZNxF">
     <div
@@ -54,8 +54,8 @@ exports[`test renders grid item without auto hide 1`] = `
   className="hWwHNT">
   <textarea
     className="kEAiXh"
-    defaultValue=""
-    onChange={[Function]} />
+    onChange={[Function]}
+    value="" />
   <div
     className="iFZNxF">
     <div
