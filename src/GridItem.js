@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import TextArea from './TextArea';
-import { isValidCss } from './utils';
 
 const Item = styled.div`
   position: relative;
@@ -54,6 +53,7 @@ class GridItem extends React.Component {
   static propTypes = {
     autoHide: React.PropTypes.bool,
     itemStyle: React.PropTypes.string,
+    itemStyleText: React.PropTypes.string,
     globalItemStyle: React.PropTypes.string,
     updateItemStyle: React.PropTypes.func,
     itemNumber: React.PropTypes.number,
@@ -61,13 +61,12 @@ class GridItem extends React.Component {
   static defaultProps = {
     autoHide: true,
     itemStyle: '',
+    itemStyleText: '',
     globalItemStyle: '',
     updateItemStyle: null,
     itemNumber: null,
   };
-  updateItemStyle = (value) => {
-    if (isValidCss(value)) this.props.updateItemStyle(this.props.itemNumber, value);
-  }
+  updateItemStyle = value => this.props.updateItemStyle(this.props.itemNumber, value)
   render() {
     return (
       <Item
@@ -76,7 +75,7 @@ class GridItem extends React.Component {
         globalItemStyle={this.props.globalItemStyle}
       >
         <TextArea
-          defaultValue={this.props.itemStyle}
+          value={this.props.itemStyleText}
           onChange={this.updateItemStyle}
         />
         <ItemNumberContainer autoHide={this.props.autoHide}>

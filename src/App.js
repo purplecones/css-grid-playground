@@ -99,9 +99,14 @@ class App extends React.Component {
     isCompatible: false,
   }
   state = {
-    globalItemStyle: defaultGlobalItemStyle,
-    gridContainerStyle: defaultContainerStyle,
-    itemStyles: defaultItemStyles,
+    // for textarea
+    gridContainerStyleText: defaultContainerStyle, // might have invalid CSS
+    globalItemStyleText: defaultGlobalItemStyle, // might have invalid CSS
+    itemStylesText: defaultItemStyles, // might have invalid CSS
+    // for valid styles
+    gridContainerStyle: defaultContainerStyle, // should have valid CSS
+    globalItemStyle: defaultGlobalItemStyle, // should have valid CSS
+    itemStyles: defaultItemStyles, // should have valid CSS
     numberOfGridItems: 6,
     autoHideItemStyle: false,
   }
@@ -114,19 +119,32 @@ class App extends React.Component {
     }, 2000);
   }
   updateGridContainerStyle = (value) => {
-    if (isValidCss(value)) this.setState({ gridContainerStyle: value });
+    if (isValidCss(value)) {
+      this.setState({ gridContainerStyle: value, gridContainerStyleText: value });
+    } else {
+      this.setState({
+        gridContainerStyleText: value,
+      });
+    }
   }
   updateGlobalItemStyles = (value) => {
-    if (isValidCss(value)) this.setState({ globalItemStyle: value });
+    if (isValidCss(value)) {
+      this.setState({ globalItemStyle: value, globalItemStyleText: value });
+    } else {
+      this.setState({ globalItemStyleText: value });
+    }
   }
   updateItemStyle = (itemIndex, value) => {
+    const itemStylesText = [...this.state.itemStylesText];
     const itemStyles = [...this.state.itemStyles];
-    itemStyles[itemIndex] = value;
+    itemStylesText[itemIndex] = value;
+    itemStyles[itemIndex] = isValidCss(value) ? value : itemStyles[itemIndex];
     this.setState({
+      itemStylesText,
       itemStyles,
     });
   }
-  resetStyles = () => this.setState({ itemStyles: [] })
+  resetStyles = () => this.setState({ itemStylesText: [], itemStyles: [] })
   updateAutoItemHide = () => this.setState({ autoHideItemStyle: !this.state.autoHideItemStyle })
   incrementGridItems = () => this.setState({
     numberOfGridItems: this.state.numberOfGridItems + 1,
@@ -135,11 +153,13 @@ class App extends React.Component {
     numberOfGridItems: this.state.numberOfGridItems - 1,
   })
   renderGridItems = () => [...Array(this.state.numberOfGridItems)].map((_, i) => {
+    const itemStyleText = this.state.itemStylesText[i] ? this.state.itemStylesText[i] : '';
     const itemStyle = this.state.itemStyles[i] ? this.state.itemStyles[i] : '';
     return (
       <GridItem
         key={i}  /* eslint react/no-array-index-key: "off" */
         itemNumber={i}
+        itemStyleText={itemStyleText}
         itemStyle={itemStyle}
         autoHide={this.state.autoHideItemStyle}
         globalItemStyle={this.state.globalItemStyle}
@@ -181,7 +201,7 @@ class App extends React.Component {
               <Header>Grid Container</Header>
             </PanelHeading>
             <TextArea
-              defaultValue={defaultContainerStyle}
+              value={this.state.gridContainerStyleText}
               onChange={this.updateGridContainerStyle}
             />
           </div>
@@ -196,7 +216,7 @@ class App extends React.Component {
               />
             </PanelHeading>
             <TextArea
-              defaultValue={defaultGlobalItemStyle}
+              value={this.state.globalItemStyleText}
               onChange={this.updateGlobalItemStyles}
             />
           </div>

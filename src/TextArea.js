@@ -19,12 +19,12 @@ const TextAreaField = styled.textarea`
 class TextArea extends React.Component {
   static propTypes = {
     styling: React.PropTypes.string,
-    defaultValue: React.PropTypes.string,
+    value: React.PropTypes.string,
     onChange: React.PropTypes.func,
   };
   static defaultProps = {
     styling: '',
-    defaultValue: '',
+    value: '',
     onChange: null,
   }
   handleChange = e => this.props.onChange(e.target.value)
@@ -32,7 +32,7 @@ class TextArea extends React.Component {
     return (
       <TextAreaField
         styling={this.props.styling}
-        defaultValue={this.props.defaultValue}
+        value={this.props.value}
         onChange={this.handleChange}
       />
     );
