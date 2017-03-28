@@ -1,6 +1,6 @@
 exports[`test renders correctly on compatible device 1`] = `
 <div
-  className="hdKDHS">
+  className="jrmAHg">
   <nav>
     <div
       className="fXHOfF">
@@ -24,8 +24,9 @@ exports[`test renders correctly on compatible device 1`] = `
     </div>
   </nav>
   <div
-    className="ifEPSI">
-    <div>
+    className="bViKQh">
+    <div
+      className="eEcbLe">
       <div
         className="gGRckH">
         <h3
@@ -40,7 +41,8 @@ exports[`test renders correctly on compatible device 1`] = `
       grid-template-columns: 2fr 5fr 2fr;
       grid-gap: 1rem;" />
     </div>
-    <div>
+    <div
+      className="eEcbLe">
       <div
         className="gGRckH">
         <h3
@@ -73,13 +75,15 @@ exports[`test renders correctly on compatible device 1`] = `
       <textarea
         className="kEAiXh"
         onChange={[Function]}
-        value="background: lightsalmon;" />
+        value="background: lightsalmon;
+      border: 2px solid black;
+      " />
     </div>
   </div>
   <div
     className="bmrzHG">
     <div
-      className="ezgUIL">
+      className="hQUkJd">
       <textarea
         className="kEAiXh"
         onChange={[Function]}
@@ -93,7 +97,7 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
     </div>
     <div
-      className="gkRuza">
+      className="dCzLbL">
       <textarea
         className="kEAiXh"
         onChange={[Function]}
@@ -107,7 +111,7 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
     </div>
     <div
-      className="evCaSB">
+      className="cIZxov">
       <textarea
         className="kEAiXh"
         onChange={[Function]}
@@ -121,7 +125,7 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
     </div>
     <div
-      className="evCaSB">
+      className="cIZxov">
       <textarea
         className="kEAiXh"
         onChange={[Function]}
@@ -135,7 +139,7 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
     </div>
     <div
-      className="ljbjis">
+      className="gRHStj">
       <textarea
         className="kEAiXh"
         onChange={[Function]}
@@ -149,7 +153,7 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
     </div>
     <div
-      className="gQhNLU">
+      className="jgEpXF">
       <textarea
         className="kEAiXh"
         onChange={[Function]}
@@ -173,6 +177,10 @@ exports[`test renders correctly on incompatible device 1`] = `
       "margin": "10px",
     }
   }>
+  <p>
+    You are running on: 
+    Other 0.0 / Other 0.0
+  </p>
   <p>
     CSS Grid Layout is still fairly new so it is not supported by your browser yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
   </p>
@@ -204,6 +212,10 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
       "margin": "10px",
     }
   }>
+  <p>
+    You are running on: 
+    Other 0.0 / Other 0.0
+  </p>
   <p>
     CSS Grid Layout is still fairly new so it is not supported by your browser yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
   </p>
