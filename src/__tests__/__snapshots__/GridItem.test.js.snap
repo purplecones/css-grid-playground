@@ -1,14 +1,18 @@
 exports[`test renders correctly as item 1 1`] = `
 <div
-  className="coFoVp">
+  className="sc-bwzfXH dYNPKz"
+  innerRef={undefined}>
   <textarea
-    className="kEAiXh"
+    className="sc-bdVaJa iYLCcn"
+    innerRef={undefined}
     onChange={[Function]}
     value="" />
   <div
-    className="iFZNxF">
+    className="sc-htpNat iUgnEl"
+    innerRef={undefined}>
     <div
-      className="dxpgzB">
+      className="sc-bxivhb fEzLwQ"
+      innerRef={undefined}>
       1
     </div>
   </div>
@@ -17,15 +21,19 @@ exports[`test renders correctly as item 1 1`] = `
 
 exports[`test renders correctly as item 2 1`] = `
 <div
-  className="coFoVp">
+  className="sc-bwzfXH dYNPKz"
+  innerRef={undefined}>
   <textarea
-    className="kEAiXh"
+    className="sc-bdVaJa iYLCcn"
+    innerRef={undefined}
     onChange={[Function]}
     value="" />
   <div
-    className="iFZNxF">
+    className="sc-htpNat iUgnEl"
+    innerRef={undefined}>
     <div
-      className="dxpgzB">
+      className="sc-bxivhb fEzLwQ"
+      innerRef={undefined}>
       2
     </div>
   </div>
@@ -34,15 +42,19 @@ exports[`test renders correctly as item 2 1`] = `
 
 exports[`test renders grid item with auto hide 1`] = `
 <div
-  className="hWwHNT">
+  className="sc-bwzfXH gFkNNC"
+  innerRef={undefined}>
   <textarea
-    className="kEAiXh"
+    className="sc-bdVaJa iYLCcn"
+    innerRef={undefined}
     onChange={[Function]}
     value="" />
   <div
-    className="iFZNxF">
+    className="sc-htpNat iUgnEl"
+    innerRef={undefined}>
     <div
-      className="dxpgzB">
+      className="sc-bxivhb fEzLwQ"
+      innerRef={undefined}>
       2
     </div>
   </div>
@@ -51,15 +63,19 @@ exports[`test renders grid item with auto hide 1`] = `
 
 exports[`test renders grid item without auto hide 1`] = `
 <div
-  className="hWwHNT">
+  className="sc-bwzfXH gFkNNC"
+  innerRef={undefined}>
   <textarea
-    className="kEAiXh"
+    className="sc-bdVaJa iYLCcn"
+    innerRef={undefined}
     onChange={[Function]}
     value="" />
   <div
-    className="iFZNxF">
+    className="sc-htpNat iUgnEl"
+    innerRef={undefined}>
     <div
-      className="dxpgzB">
+      className="sc-bxivhb fEzLwQ"
+      innerRef={undefined}>
       2
     </div>
   </div>

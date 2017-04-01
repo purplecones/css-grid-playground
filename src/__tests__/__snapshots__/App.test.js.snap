@@ -1,79 +1,71 @@
 exports[`test renders correctly on compatible device 1`] = `
 <div
-  className="jrmAHg">
-  <nav>
-    <div
-      className="fXHOfF">
-      <div
-        className="menu-item">
-        <h1
-          className="hNJzUA">
-          CSS Grid Playground
-        </h1>
-      </div>
-      <div
-        className="menu-item">
-        <a
-          aria-label="Star purplecones/css-grid-playground on GitHub"
-          className="github-button"
-          data-style="mega"
-          href="https://github.com/purplecones/css-grid-playground">
-          Star
-        </a>
-      </div>
-    </div>
-  </nav>
+  className="sc-bZQynM kNsEyr"
+  innerRef={undefined}>
   <div
-    className="bViKQh">
+    className="sc-dnqmqq cRDiNZ"
+    innerRef={undefined}>
     <div
-      className="eEcbLe">
+      className="sc-iwsKbI hRhvUA"
+      innerRef={undefined}>
       <div
-        className="gGRckH">
+        className="sc-gzVnrw AdNXm"
+        innerRef={undefined}>
         <h3
-          className="gcdvDG">
+          className="sc-htoDjs hEJyJM"
+          innerRef={undefined}>
           Grid Container
         </h3>
       </div>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
         onChange={[Function]}
         value="display: grid;
       grid-template-columns: 2fr 5fr 2fr;
       grid-gap: 1rem;" />
     </div>
     <div
-      className="eEcbLe">
+      className="sc-iwsKbI hRhvUA"
+      innerRef={undefined}>
       <div
-        className="gGRckH">
+        className="sc-gzVnrw AdNXm"
+        innerRef={undefined}>
         <h3
-          className="gcdvDG">
+          className="sc-htoDjs hEJyJM"
+          innerRef={undefined}>
           Grid Items
         </h3>
         <div>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
             onClick={[Function]}>
             👆
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
             onClick={[Function]}>
             👇
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
             onClick={[Function]}>
             👋
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
             onClick={[Function]}>
             👀
           </button>
         </div>
       </div>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
         onChange={[Function]}
         value="background: lightsalmon;
       border: 2px solid black;
@@ -81,87 +73,112 @@ exports[`test renders correctly on compatible device 1`] = `
     </div>
   </div>
   <div
-    className="bmrzHG">
+    className="sc-bdVaJa zaXMt"
+    innerRef={undefined}>
     <div
-      className="hQUkJd">
+      className="sc-htpNat iKNqzt"
+      innerRef={undefined}>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
         onChange={[Function]}
         value="grid-row: span 8;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
           1
         </div>
       </div>
     </div>
     <div
-      className="dCzLbL">
+      className="sc-htpNat hDXykK"
+      innerRef={undefined}>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
         onChange={[Function]}
         value="grid-column: 2 / 4;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
           2
         </div>
       </div>
     </div>
     <div
-      className="cIZxov">
+      className="sc-htpNat cvyvlY"
+      innerRef={undefined}>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
         onChange={[Function]}
         value="grid-row: span 9;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
           3
         </div>
       </div>
     </div>
     <div
-      className="cIZxov">
+      className="sc-htpNat cvyvlY"
+      innerRef={undefined}>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
         onChange={[Function]}
         value="grid-row: span 9;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
           4
         </div>
       </div>
     </div>
     <div
-      className="gRHStj">
+      className="sc-htpNat juRMYX"
+      innerRef={undefined}>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
         onChange={[Function]}
-        value="height: 100px;" />
+        value="" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
           5
         </div>
       </div>
     </div>
     <div
-      className="jgEpXF">
+      className="sc-htpNat juRMYX"
+      innerRef={undefined}>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
         onChange={[Function]}
         value="" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
           6
         </div>
       </div>
@@ -172,70 +189,420 @@ exports[`test renders correctly on compatible device 1`] = `
 
 exports[`test renders correctly on incompatible device 1`] = `
 <div
-  style={
-    Object {
-      "margin": "10px",
-    }
-  }>
-  <p>
-    You are running on: 
-    Other 0.0 / Other 0.0
-  </p>
-  <p>
-    CSS Grid Layout is still fairly new so it is not supported by your browser yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
-  </p>
-  <p>
-    More support info at: 
-    <a
-      href="http://caniuse.com/#feat=css-grid">
-      http://caniuse.com/#feat=css-grid
-    </a>
-  </p>
-  <p>
-    Meanwhile, here is a gif...
-  </p>
-  <img
-    alt="Demo GIF"
-    src="/mobile-demo.gif"
+  className="sc-bZQynM kNsEyr"
+  innerRef={undefined}>
+  <div
+    className="sc-dnqmqq cRDiNZ"
+    innerRef={undefined}>
+    <div
+      className="sc-iwsKbI hRhvUA"
+      innerRef={undefined}>
+      <div
+        className="sc-gzVnrw AdNXm"
+        innerRef={undefined}>
+        <h3
+          className="sc-htoDjs hEJyJM"
+          innerRef={undefined}>
+          Grid Container
+        </h3>
+      </div>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="display: grid;
+      grid-template-columns: 2fr 5fr 2fr;
+      grid-gap: 1rem;" />
+    </div>
+    <div
+      className="sc-iwsKbI hRhvUA"
+      innerRef={undefined}>
+      <div
+        className="sc-gzVnrw AdNXm"
+        innerRef={undefined}>
+        <h3
+          className="sc-htoDjs hEJyJM"
+          innerRef={undefined}>
+          Grid Items
+        </h3>
+        <div>
+          <button
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
+            onClick={[Function]}>
+            👆
+          </button>
+          <button
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
+            onClick={[Function]}>
+            👇
+          </button>
+          <button
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
+            onClick={[Function]}>
+            👋
+          </button>
+          <button
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
+            onClick={[Function]}>
+            👀
+          </button>
+        </div>
+      </div>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="background: lightsalmon;
+      border: 2px solid black;
+      " />
+    </div>
+  </div>
+  <div
+    className="sc-bdVaJa zaXMt"
+    innerRef={undefined}>
+    <div
+      className="sc-htpNat iKNqzt"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="grid-row: span 8;" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          1
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat hDXykK"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="grid-column: 2 / 4;" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          2
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat cvyvlY"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="grid-row: span 9;" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          3
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat cvyvlY"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="grid-row: span 9;" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          4
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat juRMYX"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          5
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat juRMYX"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          6
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
     style={
       Object {
-        "width": "100vw",
+        "margin": "10px",
       }
-    } />
+    }>
+    <p>
+      You are running on: 
+      Other 0.0 / Other 0.0
+    </p>
+    <p>
+      CSS Grid Layout is still fairly new so your browser might not support it yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
+    </p>
+    <p>
+      More support info at: 
+      <a
+        href="http://caniuse.com/#feat=css-grid">
+        http://caniuse.com/#feat=css-grid
+      </a>
+    </p>
+  </div>
 </div>
 `;
 
 exports[`test renders correctly on test runner as incompatible 1`] = `
 <div
-  style={
-    Object {
-      "margin": "10px",
-    }
-  }>
-  <p>
-    You are running on: 
-    Other 0.0 / Other 0.0
-  </p>
-  <p>
-    CSS Grid Layout is still fairly new so it is not supported by your browser yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
-  </p>
-  <p>
-    More support info at: 
-    <a
-      href="http://caniuse.com/#feat=css-grid">
-      http://caniuse.com/#feat=css-grid
-    </a>
-  </p>
-  <p>
-    Meanwhile, here is a gif...
-  </p>
-  <img
-    alt="Demo GIF"
-    src="/mobile-demo.gif"
+  className="sc-bZQynM kNsEyr"
+  innerRef={undefined}>
+  <div
+    className="sc-dnqmqq cRDiNZ"
+    innerRef={undefined}>
+    <div
+      className="sc-iwsKbI hRhvUA"
+      innerRef={undefined}>
+      <div
+        className="sc-gzVnrw AdNXm"
+        innerRef={undefined}>
+        <h3
+          className="sc-htoDjs hEJyJM"
+          innerRef={undefined}>
+          Grid Container
+        </h3>
+      </div>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="display: grid;
+      grid-template-columns: 2fr 5fr 2fr;
+      grid-gap: 1rem;" />
+    </div>
+    <div
+      className="sc-iwsKbI hRhvUA"
+      innerRef={undefined}>
+      <div
+        className="sc-gzVnrw AdNXm"
+        innerRef={undefined}>
+        <h3
+          className="sc-htoDjs hEJyJM"
+          innerRef={undefined}>
+          Grid Items
+        </h3>
+        <div>
+          <button
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
+            onClick={[Function]}>
+            👆
+          </button>
+          <button
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
+            onClick={[Function]}>
+            👇
+          </button>
+          <button
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
+            onClick={[Function]}>
+            👋
+          </button>
+          <button
+            className="sc-EHOje hsQUdu"
+            innerRef={undefined}
+            onClick={[Function]}>
+            👀
+          </button>
+        </div>
+      </div>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="background: lightsalmon;
+      border: 2px solid black;
+      " />
+    </div>
+  </div>
+  <div
+    className="sc-bdVaJa zaXMt"
+    innerRef={undefined}>
+    <div
+      className="sc-htpNat iKNqzt"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="grid-row: span 8;" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          1
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat hDXykK"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="grid-column: 2 / 4;" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          2
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat cvyvlY"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="grid-row: span 9;" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          3
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat cvyvlY"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="grid-row: span 9;" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          4
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat juRMYX"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          5
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat juRMYX"
+      innerRef={undefined}>
+      <textarea
+        className="sc-bwzfXH jmbEee"
+        innerRef={undefined}
+        onChange={[Function]}
+        value="" />
+      <div
+        className="sc-bxivhb cTowhe"
+        innerRef={undefined}>
+        <div
+          className="sc-ifAKCX fjRHBo"
+          innerRef={undefined}>
+          6
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
     style={
       Object {
-        "width": "100vw",
+        "margin": "10px",
       }
-    } />
+    }>
+    <p>
+      You are running on: 
+      Other 0.0 / Other 0.0
+    </p>
+    <p>
+      CSS Grid Layout is still fairly new so your browser might not support it yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
+    </p>
+    <p>
+      More support info at: 
+      <a
+        href="http://caniuse.com/#feat=css-grid">
+        http://caniuse.com/#feat=css-grid
+      </a>
+    </p>
+  </div>
 </div>
 `;

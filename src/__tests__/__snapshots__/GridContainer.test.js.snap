@@ -1,6 +1,7 @@
 exports[`test renders four grid items correctly 1`] = `
 <div
-  className="fhHjoh">
+  className="sc-bdVaJa fttYIe"
+  innerRef={undefined}>
   <div>
     1
   </div>
@@ -18,7 +19,8 @@ exports[`test renders four grid items correctly 1`] = `
 
 exports[`test renders two grid items correctly 1`] = `
 <div
-  className="fhHjoh">
+  className="sc-bdVaJa fttYIe"
+  innerRef={undefined}>
   <div>
     1
   </div>
