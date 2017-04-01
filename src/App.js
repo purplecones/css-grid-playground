@@ -11,7 +11,7 @@ const Layout = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 4fr 50vh;
+  grid-template-rows: 1fr 2fr;
 `;
 
 const PanelHeading = styled.div`
@@ -90,7 +90,7 @@ const defaultItemStyles = [
   'grid-column: 2 / 4;',
   'grid-row: span 9;',
   'grid-row: span 9;',
-  'height: 100px;',
+  '',
   '',
 ];
 
@@ -104,7 +104,7 @@ class App extends React.Component {
     isCompatible: React.PropTypes.bool,
   };
   static defaultProps = {
-    isCompatible: false,
+    isCompatible: checkCompatibility(),
   }
   state = {
     // for textarea
@@ -119,9 +119,6 @@ class App extends React.Component {
     autoHideItemStyle: false,
   }
   componentDidMount() {
-    if (this.props.isCompatible || checkCompatibility()) {
-      this.setState({ isCompatible: true }); /* eslint react/no-did-mount-set-state: "off" */
-    }
     setTimeout(() => {
       this.setState({ autoHideItemStyle: true });
     }, 2000);
@@ -177,34 +174,18 @@ class App extends React.Component {
   })
 
   render() {
-    if (!this.state.isCompatible) {
-      const agent = getAgent();
-      return (
+    const agent = getAgent();
+    const disclaimer = !this.props.isCompatible ?
+      (
         <div style={{ margin: '10px' }}>
           <p>You are running on: {`${agent.family} ${agent.major}.${agent.minor} / ${agent.os.family} ${agent.os.major}.${agent.os.minor}`}</p>
-          <p>CSS Grid Layout is still fairly new so it is not supported by your browser yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️</p>
+          <p>CSS Grid Layout is still fairly new so your browser might not support it yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️</p>
           <p>More support info at: <a href="http://caniuse.com/#feat=css-grid">http://caniuse.com/#feat=css-grid</a></p>
-          <p>Meanwhile, here is a gif...</p>
-          <img
-            style={{ width: '100vw' }}
-            src={'/mobile-demo.gif'}
-            alt="Demo GIF"
-          />
         </div>
-      ); /* eslint max-len: "off" */
-    }
+      ) : /* eslint max-len: "off" */
+      null;
     return (
       <Layout>
-        <nav>
-          <Menu>
-            <div className="menu-item">
-              <Title>CSS Grid Playground</Title>
-            </div>
-            <div className="menu-item">
-              <a className="github-button" href="https://github.com/purplecones/css-grid-playground" data-style="mega" aria-label="Star purplecones/css-grid-playground on GitHub">Star</a>
-            </div>
-          </Menu>
-        </nav>
         <Controls>
           <ControlSection>
             <PanelHeading>
@@ -238,6 +219,7 @@ class App extends React.Component {
         >
           {this.renderGridItems()}
         </GridContainer>
+        {disclaimer}
       </Layout>
     );
   }
