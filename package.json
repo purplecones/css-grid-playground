@@ -29,7 +29,7 @@
     "eject": "react-scripts eject"
   },
   "pre-commit": [
-    "test",
+    "test"
   ],
   "alias": "www.cssgridplayground.com"
 }
