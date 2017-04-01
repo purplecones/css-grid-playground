@@ -57,16 +57,20 @@ const ControlSection = styled.div`
 
 const defaultContainerStyle =
 `display: grid;
-grid-template-columns: 2fr 5fr 2fr;
-grid-gap: 1rem;`;
+grid-gap: 1rem;
+grid-template-columns: 1fr 5fr 2.5fr;
+grid-template-rows: 1fr 5fr 1fr;
+grid-template-areas:
+"header header header"
+"sidebar main aside"
+"sidebar footer footer";`;
 
 const defaultItemStyles = [
-  'grid-row: span 8;',
-  'grid-column: 2 / 4;',
-  'grid-row: span 9;',
-  'grid-row: span 9;',
-  '',
-  '',
+  'grid-area: header;',
+  'grid-area: sidebar;',
+  'grid-area: main;',
+  'grid-area: aside;',
+  'grid-area: footer;'
 ];
 
 const defaultGlobalItemStyle =
@@ -90,7 +94,7 @@ class App extends React.Component {
     gridContainerStyle: defaultContainerStyle, // should have valid CSS
     globalItemStyle: defaultGlobalItemStyle, // should have valid CSS
     itemStyles: defaultItemStyles, // should have valid CSS
-    numberOfGridItems: 6,
+    numberOfGridItems: 5,
     autoHideItemStyle: false,
   }
   componentDidMount() {

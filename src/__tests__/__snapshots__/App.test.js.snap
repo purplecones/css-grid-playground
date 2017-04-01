@@ -22,8 +22,13 @@ exports[`test renders correctly on compatible device 1`] = `
         innerRef={undefined}
         onChange={[Function]}
         value="display: grid;
-      grid-template-columns: 2fr 5fr 2fr;
-      grid-gap: 1rem;" />
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 5fr 2.5fr;
+      grid-template-rows: 1fr 5fr 1fr;
+      grid-template-areas:
+      \"header header header\"
+      \"sidebar main aside\"
+      \"sidebar footer footer\";" />
     </div>
     <div
       className="sc-iwsKbI hRhvUA"
@@ -73,16 +78,16 @@ exports[`test renders correctly on compatible device 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa zaXMt"
+    className="sc-bdVaJa ddnulc"
     innerRef={undefined}>
     <div
-      className="sc-htpNat iKNqzt"
+      className="sc-htpNat dXDmGM"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-row: span 8;" />
+        value="grid-area: header;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -94,13 +99,13 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat hDXykK"
+      className="sc-htpNat imHLTe"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-column: 2 / 4;" />
+        value="grid-area: sidebar;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -112,13 +117,13 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat cvyvlY"
+      className="sc-htpNat iRLcYM"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-row: span 9;" />
+        value="grid-area: main;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -130,13 +135,13 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat cvyvlY"
+      className="sc-htpNat fOxnHl"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-row: span 9;" />
+        value="grid-area: aside;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -148,13 +153,13 @@ exports[`test renders correctly on compatible device 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat juRMYX"
+      className="sc-htpNat jUJBfZ"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="" />
+        value="grid-area: footer;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -162,24 +167,6 @@ exports[`test renders correctly on compatible device 1`] = `
           className="sc-ifAKCX fjRHBo"
           innerRef={undefined}>
           5
-        </div>
-      </div>
-    </div>
-    <div
-      className="sc-htpNat juRMYX"
-      innerRef={undefined}>
-      <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
-        onChange={[Function]}
-        value="" />
-      <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
-        <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
-          6
         </div>
       </div>
     </div>
@@ -211,8 +198,13 @@ exports[`test renders correctly on incompatible device 1`] = `
         innerRef={undefined}
         onChange={[Function]}
         value="display: grid;
-      grid-template-columns: 2fr 5fr 2fr;
-      grid-gap: 1rem;" />
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 5fr 2.5fr;
+      grid-template-rows: 1fr 5fr 1fr;
+      grid-template-areas:
+      \"header header header\"
+      \"sidebar main aside\"
+      \"sidebar footer footer\";" />
     </div>
     <div
       className="sc-iwsKbI hRhvUA"
@@ -262,16 +254,16 @@ exports[`test renders correctly on incompatible device 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa zaXMt"
+    className="sc-bdVaJa ddnulc"
     innerRef={undefined}>
     <div
-      className="sc-htpNat iKNqzt"
+      className="sc-htpNat dXDmGM"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-row: span 8;" />
+        value="grid-area: header;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -283,13 +275,13 @@ exports[`test renders correctly on incompatible device 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat hDXykK"
+      className="sc-htpNat imHLTe"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-column: 2 / 4;" />
+        value="grid-area: sidebar;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -301,13 +293,13 @@ exports[`test renders correctly on incompatible device 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat cvyvlY"
+      className="sc-htpNat iRLcYM"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-row: span 9;" />
+        value="grid-area: main;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -319,13 +311,13 @@ exports[`test renders correctly on incompatible device 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat cvyvlY"
+      className="sc-htpNat fOxnHl"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-row: span 9;" />
+        value="grid-area: aside;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -337,13 +329,13 @@ exports[`test renders correctly on incompatible device 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat juRMYX"
+      className="sc-htpNat jUJBfZ"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="" />
+        value="grid-area: footer;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -351,24 +343,6 @@ exports[`test renders correctly on incompatible device 1`] = `
           className="sc-ifAKCX fjRHBo"
           innerRef={undefined}>
           5
-        </div>
-      </div>
-    </div>
-    <div
-      className="sc-htpNat juRMYX"
-      innerRef={undefined}>
-      <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
-        onChange={[Function]}
-        value="" />
-      <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
-        <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
-          6
         </div>
       </div>
     </div>
@@ -421,8 +395,13 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
         innerRef={undefined}
         onChange={[Function]}
         value="display: grid;
-      grid-template-columns: 2fr 5fr 2fr;
-      grid-gap: 1rem;" />
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 5fr 2.5fr;
+      grid-template-rows: 1fr 5fr 1fr;
+      grid-template-areas:
+      \"header header header\"
+      \"sidebar main aside\"
+      \"sidebar footer footer\";" />
     </div>
     <div
       className="sc-iwsKbI hRhvUA"
@@ -472,16 +451,16 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa zaXMt"
+    className="sc-bdVaJa ddnulc"
     innerRef={undefined}>
     <div
-      className="sc-htpNat iKNqzt"
+      className="sc-htpNat dXDmGM"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-row: span 8;" />
+        value="grid-area: header;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -493,13 +472,13 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat hDXykK"
+      className="sc-htpNat imHLTe"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-column: 2 / 4;" />
+        value="grid-area: sidebar;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -511,13 +490,13 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat cvyvlY"
+      className="sc-htpNat iRLcYM"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-row: span 9;" />
+        value="grid-area: main;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -529,13 +508,13 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat cvyvlY"
+      className="sc-htpNat fOxnHl"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="grid-row: span 9;" />
+        value="grid-area: aside;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -547,13 +526,13 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
       </div>
     </div>
     <div
-      className="sc-htpNat juRMYX"
+      className="sc-htpNat jUJBfZ"
       innerRef={undefined}>
       <textarea
         className="sc-bwzfXH jmbEee"
         innerRef={undefined}
         onChange={[Function]}
-        value="" />
+        value="grid-area: footer;" />
       <div
         className="sc-bxivhb cTowhe"
         innerRef={undefined}>
@@ -561,24 +540,6 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
           className="sc-ifAKCX fjRHBo"
           innerRef={undefined}>
           5
-        </div>
-      </div>
-    </div>
-    <div
-      className="sc-htpNat juRMYX"
-      innerRef={undefined}>
-      <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
-        onChange={[Function]}
-        value="" />
-      <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
-        <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
-          6
         </div>
       </div>
     </div>
