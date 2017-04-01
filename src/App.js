@@ -55,31 +55,6 @@ const ControlSection = styled.div`
   ${isSafari() ? 'margin-bottom: 4rem;' : null}
 `;
 
-const Menu = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: .5rem;
-  > .menu-item {
-    margin: 0 5px 10px 5px;
-    color: #fe8757;
-    h1 {
-      font-family: 'Gloria Hallelujah', cursive;
-    }
-    &:nth-child(1) {
-      margin-right: auto;
-    }
-  }
-`;
-
-const Title = styled.h1`
-  margin: 0;
-  font-size: 2rem;
-  @media (max-width: 600px) {
-    font-size: 1rem;
-  }
-`;
-
 const defaultContainerStyle =
 `display: grid;
 grid-template-columns: 2fr 5fr 2fr;
