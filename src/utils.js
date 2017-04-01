@@ -3,16 +3,6 @@ import useragent from 'useragent';
 const agent = useragent.parse(window.navigator.userAgent);
 
 const isValidCss = (input) => {
-  const lines = input.split(/\r\n|\r|\n/);
-  // check if each line ends with a semicolon
-  const numberOfLines = lines.length;
-  const numberOfSemiColons = (input.match(/;/g) || []).length;
-  const semiColonCheck = numberOfLines === numberOfSemiColons;
-
-  // check that semicolons are at end of line
-  const linesEndingWithSemiColons = lines.filter(line => line.match(/;$/));
-  const endingWithSemiColonCheck = linesEndingWithSemiColons.length === numberOfLines;
-
   // check for matching pairs
   const stack = [];
   for (const char of input) { /* eslint no-restricted-syntax: "off" */
@@ -24,7 +14,7 @@ const isValidCss = (input) => {
   }
   const matchingPairsCheck = stack.length === 0;
 
-  return semiColonCheck && endingWithSemiColonCheck && matchingPairsCheck;
+  return matchingPairsCheck;
 };
 
 const checkCompatibility = () => { /* eslint consistent-return: "off" */
