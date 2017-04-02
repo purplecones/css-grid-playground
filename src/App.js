@@ -70,7 +70,7 @@ const defaultItemStyles = [
   'grid-area: sidebar;',
   'grid-area: main;',
   'grid-area: aside;',
-  'grid-area: footer;'
+  'grid-area: footer;',
 ];
 
 const defaultGlobalItemStyle =
@@ -103,20 +103,20 @@ class App extends React.Component {
     }, 2000);
   }
   updateGridContainerStyle = (value) => {
-    if (isValidCss(value)) {
-      this.setState({ gridContainerStyle: value, gridContainerStyleText: value });
-    } else {
-      this.setState({
-        gridContainerStyleText: value,
-      });
-    }
+    this.setState({
+      gridContainerStyle: isValidCss(value) ? value : this.state.gridContainerStyleText,
+      gridContainerStyleText: value,
+    });
   }
   updateGlobalItemStyles = (value) => {
-    if (isValidCss(value)) {
-      this.setState({ globalItemStyle: value, globalItemStyleText: value });
-    } else {
-      this.setState({ globalItemStyleText: value });
-    }
+    // if (isValidCss(value)) {
+    this.setState({
+      globalItemStyle: isValidCss(value) ? value : this.state.globalItemStyle,
+      globalItemStyleText: value,
+    });
+    // } else {
+    //   this.setState({ globalItemStyleText: value });
+    // }
   }
   updateItemStyle = (itemIndex, value) => {
     const itemStylesText = [...this.state.itemStylesText];
