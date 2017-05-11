@@ -1,26 +1,22 @@
 exports[`test renders correctly 1`] = `
 <div>
   <button
-    className="sc-bdVaJa dxBZN"
-    innerRef={undefined}
+    className="czOWQi"
     onClick={null}>
     👆
   </button>
   <button
-    className="sc-bdVaJa dxBZN"
-    innerRef={undefined}
+    className="czOWQi"
     onClick={null}>
     👇
   </button>
   <button
-    className="sc-bdVaJa dxBZN"
-    innerRef={undefined}
+    className="czOWQi"
     onClick={null}>
     👋
   </button>
   <button
-    className="sc-bdVaJa dxBZN"
-    innerRef={undefined}
+    className="czOWQi"
     onClick={null}>
     👀
   </button>

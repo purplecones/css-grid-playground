@@ -1,25 +1,23 @@
 exports[`test renders correctly on compatible device 1`] = `
 <div
-  className="sc-bZQynM kNsEyr"
-  innerRef={undefined}>
+  className="iUgsD">
+  <h1
+    className="fCuiQK">
+    CSS Grid Playground
+  </h1>
   <div
-    className="sc-dnqmqq cRDiNZ"
-    innerRef={undefined}>
+    className="tcdOr">
     <div
-      className="sc-iwsKbI hRhvUA"
-      innerRef={undefined}>
+      className="eEcbLe">
       <div
-        className="sc-gzVnrw AdNXm"
-        innerRef={undefined}>
+        className="gGRckH">
         <h3
-          className="sc-htoDjs hEJyJM"
-          innerRef={undefined}>
+          className="gcdvDG">
           Grid Container
         </h3>
       </div>
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="display: grid;
       grid-gap: 1rem;
@@ -31,46 +29,38 @@ exports[`test renders correctly on compatible device 1`] = `
       \"sidebar footer footer\";" />
     </div>
     <div
-      className="sc-iwsKbI hRhvUA"
-      innerRef={undefined}>
+      className="eEcbLe">
       <div
-        className="sc-gzVnrw AdNXm"
-        innerRef={undefined}>
+        className="gGRckH">
         <h3
-          className="sc-htoDjs hEJyJM"
-          innerRef={undefined}>
+          className="gcdvDG">
           Grid Items
         </h3>
         <div>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👆
           </button>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👇
           </button>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👋
           </button>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👀
           </button>
         </div>
       </div>
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="background: lightsalmon;
       border: 2px solid black;
@@ -78,124 +68,110 @@ exports[`test renders correctly on compatible device 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa ddnulc"
-    innerRef={undefined}>
+    className="chDftT">
     <div
-      className="sc-htpNat dXDmGM"
-      innerRef={undefined}>
+      className="bixtXF">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: header;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           1
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat imHLTe"
-      innerRef={undefined}>
+      className="bWWVGb">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: sidebar;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           2
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat iRLcYM"
-      innerRef={undefined}>
+      className="ipHFtB">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: main;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           3
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat fOxnHl"
-      innerRef={undefined}>
+      className="eoirsh">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: aside;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           4
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat jUJBfZ"
-      innerRef={undefined}>
+      className="gKZiAA">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: footer;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           5
         </div>
       </div>
     </div>
+  </div>
+  <div
+    className="gspEWO">
+    <a
+      href="https://github.com/purplecones/css-grid-playground">
+      <img
+        alt="Github Logo"
+        src="/github.png" />
+    </a>
   </div>
 </div>
 `;
 
 exports[`test renders correctly on incompatible device 1`] = `
 <div
-  className="sc-bZQynM kNsEyr"
-  innerRef={undefined}>
+  className="iUgsD">
+  <h1
+    className="fCuiQK">
+    CSS Grid Playground
+  </h1>
   <div
-    className="sc-dnqmqq cRDiNZ"
-    innerRef={undefined}>
+    className="tcdOr">
     <div
-      className="sc-iwsKbI hRhvUA"
-      innerRef={undefined}>
+      className="eEcbLe">
       <div
-        className="sc-gzVnrw AdNXm"
-        innerRef={undefined}>
+        className="gGRckH">
         <h3
-          className="sc-htoDjs hEJyJM"
-          innerRef={undefined}>
+          className="gcdvDG">
           Grid Container
         </h3>
       </div>
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="display: grid;
       grid-gap: 1rem;
@@ -207,46 +183,38 @@ exports[`test renders correctly on incompatible device 1`] = `
       \"sidebar footer footer\";" />
     </div>
     <div
-      className="sc-iwsKbI hRhvUA"
-      innerRef={undefined}>
+      className="eEcbLe">
       <div
-        className="sc-gzVnrw AdNXm"
-        innerRef={undefined}>
+        className="gGRckH">
         <h3
-          className="sc-htoDjs hEJyJM"
-          innerRef={undefined}>
+          className="gcdvDG">
           Grid Items
         </h3>
         <div>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👆
           </button>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👇
           </button>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👋
           </button>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👀
           </button>
         </div>
       </div>
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="background: lightsalmon;
       border: 2px solid black;
@@ -254,98 +222,86 @@ exports[`test renders correctly on incompatible device 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa ddnulc"
-    innerRef={undefined}>
+    className="chDftT">
     <div
-      className="sc-htpNat dXDmGM"
-      innerRef={undefined}>
+      className="bixtXF">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: header;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           1
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat imHLTe"
-      innerRef={undefined}>
+      className="bWWVGb">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: sidebar;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           2
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat iRLcYM"
-      innerRef={undefined}>
+      className="ipHFtB">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: main;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           3
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat fOxnHl"
-      innerRef={undefined}>
+      className="eoirsh">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: aside;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           4
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat jUJBfZ"
-      innerRef={undefined}>
+      className="gKZiAA">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: footer;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           5
         </div>
       </div>
     </div>
+  </div>
+  <div
+    className="gspEWO">
+    <a
+      href="https://github.com/purplecones/css-grid-playground">
+      <img
+        alt="Github Logo"
+        src="/github.png" />
+    </a>
   </div>
   <div
     style={
@@ -373,26 +329,24 @@ exports[`test renders correctly on incompatible device 1`] = `
 
 exports[`test renders correctly on test runner as incompatible 1`] = `
 <div
-  className="sc-bZQynM kNsEyr"
-  innerRef={undefined}>
+  className="iUgsD">
+  <h1
+    className="fCuiQK">
+    CSS Grid Playground
+  </h1>
   <div
-    className="sc-dnqmqq cRDiNZ"
-    innerRef={undefined}>
+    className="tcdOr">
     <div
-      className="sc-iwsKbI hRhvUA"
-      innerRef={undefined}>
+      className="eEcbLe">
       <div
-        className="sc-gzVnrw AdNXm"
-        innerRef={undefined}>
+        className="gGRckH">
         <h3
-          className="sc-htoDjs hEJyJM"
-          innerRef={undefined}>
+          className="gcdvDG">
           Grid Container
         </h3>
       </div>
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="display: grid;
       grid-gap: 1rem;
@@ -404,46 +358,38 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
       \"sidebar footer footer\";" />
     </div>
     <div
-      className="sc-iwsKbI hRhvUA"
-      innerRef={undefined}>
+      className="eEcbLe">
       <div
-        className="sc-gzVnrw AdNXm"
-        innerRef={undefined}>
+        className="gGRckH">
         <h3
-          className="sc-htoDjs hEJyJM"
-          innerRef={undefined}>
+          className="gcdvDG">
           Grid Items
         </h3>
         <div>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👆
           </button>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👇
           </button>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👋
           </button>
           <button
-            className="sc-EHOje hsQUdu"
-            innerRef={undefined}
+            className="czOWQi"
             onClick={[Function]}>
             👀
           </button>
         </div>
       </div>
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="background: lightsalmon;
       border: 2px solid black;
@@ -451,98 +397,86 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
     </div>
   </div>
   <div
-    className="sc-bdVaJa ddnulc"
-    innerRef={undefined}>
+    className="chDftT">
     <div
-      className="sc-htpNat dXDmGM"
-      innerRef={undefined}>
+      className="bixtXF">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: header;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           1
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat imHLTe"
-      innerRef={undefined}>
+      className="bWWVGb">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: sidebar;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           2
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat iRLcYM"
-      innerRef={undefined}>
+      className="ipHFtB">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: main;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           3
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat fOxnHl"
-      innerRef={undefined}>
+      className="eoirsh">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: aside;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           4
         </div>
       </div>
     </div>
     <div
-      className="sc-htpNat jUJBfZ"
-      innerRef={undefined}>
+      className="gKZiAA">
       <textarea
-        className="sc-bwzfXH jmbEee"
-        innerRef={undefined}
+        className="kEAiXh"
         onChange={[Function]}
         value="grid-area: footer;" />
       <div
-        className="sc-bxivhb cTowhe"
-        innerRef={undefined}>
+        className="iuomSm">
         <div
-          className="sc-ifAKCX fjRHBo"
-          innerRef={undefined}>
+          className="dxpgzB">
           5
         </div>
       </div>
     </div>
+  </div>
+  <div
+    className="gspEWO">
+    <a
+      href="https://github.com/purplecones/css-grid-playground">
+      <img
+        alt="Github Logo"
+        src="/github.png" />
+    </a>
   </div>
   <div
     style={
