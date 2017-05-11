@@ -9,11 +9,14 @@ import { isValidCss, checkCompatibility, isSafari, getAgent } from './utils';
 const Layout = styled.div`
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr;
+  display: flex;
+  flex-direction: column;
 `;
-
+const Title = styled.h1`
+  text-align: center;
+  font-weight: 300;
+  margin: 1em;
+`;
 const PanelHeading = styled.div`
   display: flex;
   align-items: baseline;
@@ -30,7 +33,6 @@ const Header = styled.h3`
 
 const Controls = styled.div`
   height: 15rem;
-  background: white;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: .5rem;
@@ -77,6 +79,11 @@ const defaultGlobalItemStyle =
 `background: lightsalmon;
 border: 2px solid black;
 `;
+const GithubLogo = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+`;
 
 class App extends React.Component {
   static propTypes = {
@@ -109,14 +116,10 @@ class App extends React.Component {
     });
   }
   updateGlobalItemStyles = (value) => {
-    // if (isValidCss(value)) {
     this.setState({
       globalItemStyle: isValidCss(value) ? value : this.state.globalItemStyle,
       globalItemStyleText: value,
     });
-    // } else {
-    //   this.setState({ globalItemStyleText: value });
-    // }
   }
   updateItemStyle = (itemIndex, value) => {
     const itemStylesText = [...this.state.itemStylesText];
@@ -165,6 +168,7 @@ class App extends React.Component {
       null;
     return (
       <Layout>
+        <Title>CSS Grid Playground</Title>
         <Controls>
           <ControlSection>
             <PanelHeading>
@@ -198,6 +202,11 @@ class App extends React.Component {
         >
           {this.renderGridItems()}
         </GridContainer>
+        <GithubLogo>
+          <a href="https://github.com/purplecones/css-grid-playground">
+            <img src={`${process.env.PUBLIC_URL}/github.png`} alt="Github Logo" />
+          </a>
+        </GithubLogo>
         {disclaimer}
       </Layout>
     );

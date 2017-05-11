@@ -5,8 +5,9 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-overdrive": "^0.0.4",
     "react-test-renderer": "^15.4.2",
-    "styled-components": "next",
+    "styled-components": "^1.4.4",
     "useragent": "^2.1.13",
     "yamlparser": "^0.0.2"
   },
@@ -28,7 +29,6 @@
     "test:cover": "yarn test -- --coverage && open coverage/lcov-report/index.html",
     "eject": "react-scripts eject"
   },
-  "pre-commit": [
-  ],
+  "pre-commit": [],
   "alias": "www.cssgridplayground.com"
 }
