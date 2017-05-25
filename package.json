@@ -5,11 +5,7 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-overdrive": "^0.0.4",
-    "react-test-renderer": "^15.4.2",
-    "styled-components": "^1.4.4",
-    "useragent": "^2.1.13",
-    "yamlparser": "^0.0.2"
+    "styled-components": "^2.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
@@ -19,12 +15,14 @@
     "eslint-plugin-react": "^6.10.3",
     "pre-commit": "^1.2.2",
     "react-scripts": "0.9.5",
+    "react-test-renderer": "^15.4.2",
     "serve": "^5.0.1"
   },
   "scripts": {
     "now-start": "cd build && serve -s ./",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "cd build && now --static --name css-grid-playground",
     "test": "react-scripts test --env=jsdom",
     "test:cover": "yarn test -- --coverage && open coverage/lcov-report/index.html",
     "eject": "react-scripts eject"

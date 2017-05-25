@@ -1,23 +1,23 @@
 exports[`test renders correctly on compatible device 1`] = `
 <div
-  className="iUgsD">
+  className="sc-bZQynM dmKqpQ">
   <h1
-    className="fCuiQK">
+    className="sc-gzVnrw iKRXfP">
     CSS Grid Playground
   </h1>
   <div
-    className="tcdOr">
+    className="sc-iwsKbI bSsVXp">
     <div
-      className="eEcbLe">
+      className="sc-gZMcBi fZtgdo">
       <div
-        className="gGRckH">
+        className="sc-htoDjs jfnmFn">
         <h3
-          className="gcdvDG">
+          className="sc-dnqmqq jeGabC">
           Grid Container
         </h3>
       </div>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="display: grid;
       grid-gap: 1rem;
@@ -29,38 +29,38 @@ exports[`test renders correctly on compatible device 1`] = `
       \"sidebar footer footer\";" />
     </div>
     <div
-      className="eEcbLe">
+      className="sc-gZMcBi fZtgdo">
       <div
-        className="gGRckH">
+        className="sc-htoDjs jfnmFn">
         <h3
-          className="gcdvDG">
+          className="sc-dnqmqq jeGabC">
           Grid Items
         </h3>
         <div>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👆
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👇
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👋
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👀
           </button>
         </div>
       </div>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="background: lightsalmon;
       border: 2px solid black;
@@ -68,80 +68,80 @@ exports[`test renders correctly on compatible device 1`] = `
     </div>
   </div>
   <div
-    className="chDftT">
+    className="sc-bdVaJa ddnulc">
     <div
-      className="bixtXF">
+      className="sc-htpNat dXDmGM">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: header;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           1
         </div>
       </div>
     </div>
     <div
-      className="bWWVGb">
+      className="sc-htpNat imHLTe">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: sidebar;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           2
         </div>
       </div>
     </div>
     <div
-      className="ipHFtB">
+      className="sc-htpNat iRLcYM">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: main;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           3
         </div>
       </div>
     </div>
     <div
-      className="eoirsh">
+      className="sc-htpNat fOxnHl">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: aside;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           4
         </div>
       </div>
     </div>
     <div
-      className="gKZiAA">
+      className="sc-htpNat jUJBfZ">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: footer;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           5
         </div>
       </div>
     </div>
   </div>
   <div
-    className="gspEWO">
+    className="sc-gqjmRU jZhdzD">
     <a
       href="https://github.com/purplecones/css-grid-playground">
       <img
@@ -154,24 +154,24 @@ exports[`test renders correctly on compatible device 1`] = `
 
 exports[`test renders correctly on incompatible device 1`] = `
 <div
-  className="iUgsD">
+  className="sc-bZQynM dmKqpQ">
   <h1
-    className="fCuiQK">
+    className="sc-gzVnrw iKRXfP">
     CSS Grid Playground
   </h1>
   <div
-    className="tcdOr">
+    className="sc-iwsKbI bSsVXp">
     <div
-      className="eEcbLe">
+      className="sc-gZMcBi fZtgdo">
       <div
-        className="gGRckH">
+        className="sc-htoDjs jfnmFn">
         <h3
-          className="gcdvDG">
+          className="sc-dnqmqq jeGabC">
           Grid Container
         </h3>
       </div>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="display: grid;
       grid-gap: 1rem;
@@ -183,38 +183,38 @@ exports[`test renders correctly on incompatible device 1`] = `
       \"sidebar footer footer\";" />
     </div>
     <div
-      className="eEcbLe">
+      className="sc-gZMcBi fZtgdo">
       <div
-        className="gGRckH">
+        className="sc-htoDjs jfnmFn">
         <h3
-          className="gcdvDG">
+          className="sc-dnqmqq jeGabC">
           Grid Items
         </h3>
         <div>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👆
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👇
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👋
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👀
           </button>
         </div>
       </div>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="background: lightsalmon;
       border: 2px solid black;
@@ -222,131 +222,110 @@ exports[`test renders correctly on incompatible device 1`] = `
     </div>
   </div>
   <div
-    className="chDftT">
+    className="sc-bdVaJa ddnulc">
     <div
-      className="bixtXF">
+      className="sc-htpNat dXDmGM">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: header;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           1
         </div>
       </div>
     </div>
     <div
-      className="bWWVGb">
+      className="sc-htpNat imHLTe">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: sidebar;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           2
         </div>
       </div>
     </div>
     <div
-      className="ipHFtB">
+      className="sc-htpNat iRLcYM">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: main;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           3
         </div>
       </div>
     </div>
     <div
-      className="eoirsh">
+      className="sc-htpNat fOxnHl">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: aside;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           4
         </div>
       </div>
     </div>
     <div
-      className="gKZiAA">
+      className="sc-htpNat jUJBfZ">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: footer;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           5
         </div>
       </div>
     </div>
   </div>
   <div
-    className="gspEWO">
+    className="sc-gqjmRU jZhdzD">
     <a
       href="https://github.com/purplecones/css-grid-playground">
       <img
         alt="Github Logo"
         src="/github.png" />
     </a>
-  </div>
-  <div
-    style={
-      Object {
-        "margin": "10px",
-      }
-    }>
-    <p>
-      You are running on: 
-      Other 0.0 / Other 0.0
-    </p>
-    <p>
-      CSS Grid Layout is still fairly new so your browser might not support it yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
-    </p>
-    <p>
-      More support info at: 
-      <a
-        href="http://caniuse.com/#feat=css-grid">
-        http://caniuse.com/#feat=css-grid
-      </a>
-    </p>
   </div>
 </div>
 `;
 
 exports[`test renders correctly on test runner as incompatible 1`] = `
 <div
-  className="iUgsD">
+  className="sc-bZQynM dmKqpQ">
   <h1
-    className="fCuiQK">
+    className="sc-gzVnrw iKRXfP">
     CSS Grid Playground
   </h1>
   <div
-    className="tcdOr">
+    className="sc-iwsKbI bSsVXp">
     <div
-      className="eEcbLe">
+      className="sc-gZMcBi fZtgdo">
       <div
-        className="gGRckH">
+        className="sc-htoDjs jfnmFn">
         <h3
-          className="gcdvDG">
+          className="sc-dnqmqq jeGabC">
           Grid Container
         </h3>
       </div>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="display: grid;
       grid-gap: 1rem;
@@ -358,38 +337,38 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
       \"sidebar footer footer\";" />
     </div>
     <div
-      className="eEcbLe">
+      className="sc-gZMcBi fZtgdo">
       <div
-        className="gGRckH">
+        className="sc-htoDjs jfnmFn">
         <h3
-          className="gcdvDG">
+          className="sc-dnqmqq jeGabC">
           Grid Items
         </h3>
         <div>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👆
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👇
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👋
           </button>
           <button
-            className="czOWQi"
+            className="sc-EHOje hsQUdu"
             onClick={[Function]}>
             👀
           </button>
         </div>
       </div>
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="background: lightsalmon;
       border: 2px solid black;
@@ -397,107 +376,86 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
     </div>
   </div>
   <div
-    className="chDftT">
+    className="sc-bdVaJa ddnulc">
     <div
-      className="bixtXF">
+      className="sc-htpNat dXDmGM">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: header;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           1
         </div>
       </div>
     </div>
     <div
-      className="bWWVGb">
+      className="sc-htpNat imHLTe">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: sidebar;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           2
         </div>
       </div>
     </div>
     <div
-      className="ipHFtB">
+      className="sc-htpNat iRLcYM">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: main;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           3
         </div>
       </div>
     </div>
     <div
-      className="eoirsh">
+      className="sc-htpNat fOxnHl">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: aside;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           4
         </div>
       </div>
     </div>
     <div
-      className="gKZiAA">
+      className="sc-htpNat jUJBfZ">
       <textarea
-        className="kEAiXh"
+        className="sc-bwzfXH jmbEee"
         onChange={[Function]}
         value="grid-area: footer;" />
       <div
-        className="iuomSm">
+        className="sc-bxivhb cTowhe">
         <div
-          className="dxpgzB">
+          className="sc-ifAKCX fjRHBo">
           5
         </div>
       </div>
     </div>
   </div>
   <div
-    className="gspEWO">
+    className="sc-gqjmRU jZhdzD">
     <a
       href="https://github.com/purplecones/css-grid-playground">
       <img
         alt="Github Logo"
         src="/github.png" />
     </a>
-  </div>
-  <div
-    style={
-      Object {
-        "margin": "10px",
-      }
-    }>
-    <p>
-      You are running on: 
-      Other 0.0 / Other 0.0
-    </p>
-    <p>
-      CSS Grid Layout is still fairly new so your browser might not support it yet. For now, come back on the latest versions of Chrome, Firefox, Safari, and Opera. ☕️
-    </p>
-    <p>
-      More support info at: 
-      <a
-        href="http://caniuse.com/#feat=css-grid">
-        http://caniuse.com/#feat=css-grid
-      </a>
-    </p>
   </div>
 </div>
 `;

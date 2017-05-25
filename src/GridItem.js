@@ -53,7 +53,6 @@ class GridItem extends React.Component {
   static propTypes = {
     autoHide: React.PropTypes.bool,
     itemStyle: React.PropTypes.string,
-    itemStyleText: React.PropTypes.string,
     globalItemStyle: React.PropTypes.string,
     updateItemStyle: React.PropTypes.func,
     itemNumber: React.PropTypes.number,
@@ -61,7 +60,6 @@ class GridItem extends React.Component {
   static defaultProps = {
     autoHide: true,
     itemStyle: '',
-    itemStyleText: '',
     globalItemStyle: '',
     updateItemStyle: null,
     itemNumber: null,
@@ -75,7 +73,7 @@ class GridItem extends React.Component {
         globalItemStyle={this.props.globalItemStyle}
       >
         <TextArea
-          value={this.props.itemStyleText}
+          value={this.props.itemStyle}
           onChange={this.updateItemStyle}
         />
         <ItemNumberContainer autoHide={this.props.autoHide}>

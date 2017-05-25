@@ -1,14 +1,14 @@
 exports[`test renders correctly as item 1 1`] = `
 <div
-  className="coFoVp">
+  className="sc-bwzfXH dYNPKz">
   <textarea
-    className="kEAiXh"
+    className="sc-bdVaJa iYLCcn"
     onChange={[Function]}
-    value="" />
+    value="background: red;" />
   <div
-    className="iFZNxF">
+    className="sc-htpNat iUgnEl">
     <div
-      className="dxpgzB">
+      className="sc-bxivhb fEzLwQ">
       1
     </div>
   </div>
@@ -17,15 +17,15 @@ exports[`test renders correctly as item 1 1`] = `
 
 exports[`test renders correctly as item 2 1`] = `
 <div
-  className="coFoVp">
+  className="sc-bwzfXH dYNPKz">
   <textarea
-    className="kEAiXh"
+    className="sc-bdVaJa iYLCcn"
     onChange={[Function]}
-    value="" />
+    value="background: red;" />
   <div
-    className="iFZNxF">
+    className="sc-htpNat iUgnEl">
     <div
-      className="dxpgzB">
+      className="sc-bxivhb fEzLwQ">
       2
     </div>
   </div>
@@ -34,15 +34,15 @@ exports[`test renders correctly as item 2 1`] = `
 
 exports[`test renders grid item with auto hide 1`] = `
 <div
-  className="hWwHNT">
+  className="sc-bwzfXH gFkNNC">
   <textarea
-    className="kEAiXh"
+    className="sc-bdVaJa iYLCcn"
     onChange={[Function]}
     value="" />
   <div
-    className="iFZNxF">
+    className="sc-htpNat iUgnEl">
     <div
-      className="dxpgzB">
+      className="sc-bxivhb fEzLwQ">
       2
     </div>
   </div>
@@ -51,15 +51,15 @@ exports[`test renders grid item with auto hide 1`] = `
 
 exports[`test renders grid item without auto hide 1`] = `
 <div
-  className="hWwHNT">
+  className="sc-bwzfXH gFkNNC">
   <textarea
-    className="kEAiXh"
+    className="sc-bdVaJa iYLCcn"
     onChange={[Function]}
     value="" />
   <div
-    className="iFZNxF">
+    className="sc-htpNat iUgnEl">
     <div
-      className="dxpgzB">
+      className="sc-bxivhb fEzLwQ">
       2
     </div>
   </div>
