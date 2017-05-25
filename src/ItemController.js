@@ -2,28 +2,49 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  width: 25px;
-  background: white;
   border: 0;
+  background: none;
   text-align: center;
   cursor: pointer;
   &:focus {
     outline: none;
   }
-  &:nth-child(3) {
-    margin: 0 0 0 5px;
-  }
-  &:last-child {
-    margin: 0 5px 0 10px;
-  }
 `;
 
 const ItemController = props => (
   <div>
-    <Button onClick={props.onIncrease}>👆</Button>
-    <Button onClick={props.onDecrease}>👇</Button>
-    <Button onClick={props.onReset}>👋</Button>
-    <Button onClick={props.onHideStyle}>👀</Button>
+    <Button onClick={props.onIncrease}>
+      <img
+        width="15"
+        height="15"
+        alt="Minus icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAn0lEQVRoQ+2YQQrAIBDE9P+Pbs9CYQ5xKEp63g01kR46x+HPPPz9hwf4u6AFLAANeIWgQLxuAawQAiwABeJ1C2CFEGABKBCvWwArhAALQIF4/coCD9bSBSzSvwp4gG6A9U/KlQXKAvfir/wK7VVUplmgLDjiLRAVlQcsUBYc8RaIisoDFigLjngLREXlAQuUBUe8BaKi8oAFyoIj/vgCLy7LBDFhVD5yAAAAAElFTkSuQmCC"
+      />
+    </Button>
+    <Button onClick={props.onDecrease}>
+      <img
+        width="15"
+        height="15"
+        alt="Plus icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAnklEQVRoQ+3XQQqAMAwF0Xr/Q+vGjSIS+A1Sea7bNJmMqW5j8WdbPP+hgK872NmB/VZcy1ktQc/EFVDRUwdeKFGIQhUCFAopmUIUolBIgEIhQFOIQg0K3b8iwyOmb79o//QOKGA682vA/3dgFkB/ZBWSLjIXWcWTlzUUohCFQgIUCgGaQhSiUEiAQiFAUygEGG/v7ECcXCWAAiqUOtccVL8oMW7pmEkAAAAASUVORK5CYII="
+      />
+    </Button>
+    <Button onClick={props.onReset}>
+      <img
+        width="15"
+        height="15"
+        alt="Clear icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABl0lEQVRoQ+2Y0VEDMQxENx3QCSkBOkg6gMqgA+gASkg6oQRGTDzjudydV9YqcIPv17K9Tyv7PNph499u4/oxAH7bweHAcCCYgX9VQncAHgC8B5PWmn4A8AngqxVo46wDJv4DwB7AM4BXZvGOmCcALwBOAB4ZCAagFl80ZUAU8WUPCoIBMEvfZrKphJiKL9sdWyXLANhiSxsoIEJrswBZECHxnkNcLA1vWJWiZC2PA0oIifgeBxQQMvERgN4zIRUfBfBCyMUrAFiIFPEqgBaEjdvzYPop/iH0W4h51ixleW6uRLzSgdbtVEPIxGcArJWTjUnFD4CZ4mbOgdSFnqfE0oFmxJe5MggVwNo9/+evUeYnxcQwV/VVTNQBjzBPLA0TAegR1DNnFaYXICIkMldSQgoBijV+YLwOyDZWNQo8AErxrbcT/Z9gATLESyAYgM03tqy1aM3W++oKoC2mL/Tr5tn50kxebfIyDpiGGiJD/LScKPHeW2jT7XVHJdw2lC2h26py7DYAHMlKCR0OpKTVsehwwJGslNBvypV0Mel0u1AAAAAASUVORK5CYII="
+      />
+    </Button>
+    <Button onClick={props.onHideStyle}>
+      <img
+        width="15"
+        height="15"
+        alt="Hide icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAESUlEQVR4Xu2ZjbENQRCFz4uADBABIkAEiAARIAJEgAgQASJABJ4IEAEioD61/Wpe35np2Z+7Vu101dZVdne6+8w53b3zTrRzO9l5/uoAdAbsHIEugZ0ToBfBLoEugZ0j0CWwcwL0LtAl0CWwDgI3JN2UdHm4Lkq65lyfSvop6dtwfZT06djhHUsCJHpb0p0h8Tl5AMQ7Se8HYOasdfDu0gDck3R/gaRLSQLGa0lvlkJhCQCg88MhcXZ+DUMmAPFykM1kn3MBeCLpkSRAqNl3SewegfOL2a+9R43ArFbweylYl5qB/8mMmAoAwb0aClopxi/DLqFfEp9iMIo6gqyuVhZg/QcZUEOfYwFgp0mcoHL2ayhYLyRR1Zc0uga7TZ0pGWADBMxosjEAkDTJ1+gOFdmtYxrar4FA8oAAGKG1AvB8QD9a8Eoj3a1o2iwAW2BNi5aRxdcokGG9x9FzEQDs9ofM0JJbF8374cY/F60HELcaKMxztZpgfsP1agCQDMnnKE/7sWHHnIE2u1izzw0gEfT1YJ2nkuhAZjYkwSxvSAJQszWpBAA6hvY+eYoc99AXbYwR1wwnvrWlwVDAWLPF0DBaLxldiM0xY2Tm/6hTvHfBvVisCzkASJBi5w2K48Ba2m/3QCSnlt23JSMWsDE/Cv5hJhuUk8gBsD7oUvJQjHtpexkLgH8+YkIEaM0/AMEEvke8nQMhdVJKvtTatgyAJV1qmWcgGAAUPCjqrdbXYUOqtagFtlZuYog6io+X2lSaT0ogUGhPDQBfVFIEQStnWyyCuTipZ7nh7BwAvFiSAAjmQPDIPpNEe6pZCwui3Wd93wZLTC0lfyABC7oGAn0+LYK+rUWVGx/QFOaUhhiSh43RLO87iq/u+KHl5na+WAQjEPxUlRtJozqQ+gBAA4LEGaJqvd/ejfxy/21h4ArboDmpDRR33Td9Ogz9i48hG4KIHfaQfG2AOyfRaBSGrn6qMg2i+Zxk/haXqMlPvJ/rVrarjMa5GkSHAJhRo7DFV9MsC9r8n2qaSREQIh2PxYBY0H567IZ0rBblPsTCmhJNWxYk+sx9aHAfILxzRlGksqRBbX8Qk/NtPvlgA5yqtQJg+qJIRed05jD8FI2CG+5Hn9B+Gc4fkWbtw+zsnTEAWBuDDbUTmTQgk0lTMBlA0C7tLDpnsFcpwux6s/zGAmCOCAwgWg4leAfmUDRbD0fROUWt9XjNasFooKcCYEAQIJW3VRYEaBdB205Bc8AEWLtaFALd8d8yP2TXmwvAVCBakqs9MztxW3wpAGw9O8PPfYfPTZr3OZdgt5tOfFscLg2A+YTSgME1FwySJmGu5uLWkjzPHAsA758qbn/y4t+m+fQ5qwl0DvsT2rEmysltsBXY/+a5tRiwWUA6AJvdmpUC6wxYCejNuukM2OzWrBRYZ8BKQG/WTWfAZrdmpcA6A1YCerNuOgM2uzUrBfYH/6zsQTLY9P4AAAAASUVORK5CYII="
+      />
+    </Button>
   </div>
 );
 

@@ -12,9 +12,12 @@ const Layout = styled.div`
   flex-direction: column;
 `;
 const Title = styled.h1`
-  text-align: center;
   font-weight: 300;
-  margin: 1em;
+  margin: 0;
+  @media (max-width: 550px) {
+    font-size: 1rem;
+    font-weight: 400;
+  };
 `;
 const PanelHeading = styled.div`
   display: flex;
@@ -23,28 +26,17 @@ const PanelHeading = styled.div`
 `;
 const Header = styled.h3`
   text-align: center;
-  font-size: .80rem
-  @media (max-width: 600px) {
-    font-size: .70rem;
-  }
+  font-size: .80rem;
   margin: 0;
+  @media (max-width: 550px) {
+    font-size: 1rem;
+    font-weight: 300;
+  };
 `;
 
 const Controls = styled.div`
-  height: 15rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-gap: .5rem;
-  @media (max-width: 600px) {
-    height: 20rem;
-    ${/* ${isSafari() ? 'height: 25rem;' : null} */ ''}
-  }
-  textarea {
-    width: 100%;
-    height: 100%;
-    padding: .5rem;
-    background: #efefef;
-  }
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const ControlSection = styled.div`
@@ -53,7 +45,31 @@ const ControlSection = styled.div`
   align-items: center;
   flex-direction: column;
   margin: .5rem;
-  ${/* ${isSafari() ? 'margin-bottom: 4rem;' : null} */ ''}
+  height: 200px;
+  flex: 1;
+  min-width: 300px;
+  > textarea {
+    border: 1px solid #999999;
+    &:focus {
+      border-color: #6e6e6e;
+      box-shadow: 0 0 20px 0px #e6e6e6;
+    }
+  }
+`;
+
+const Top = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+`;
+
+const SocialButtons = styled.div`
+  display: flex;
+  > * {
+    margin: 0 5px;
+  }
 `;
 
 const defaultContainerStyle = `display: grid;
@@ -76,12 +92,6 @@ const defaultItemStyles = [
 const defaultGlobalItemStyle = `background: lightsalmon;
 border: 2px solid black;
 `;
-const GithubLogo = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 1em;
-`;
-
 class App extends React.Component {
   state = {
     gridContainerStyle: defaultContainerStyle,
@@ -95,16 +105,14 @@ class App extends React.Component {
       this.setState({ autoHideItemStyle: true });
     }, 2000);
   }
-  updateGridContainerStyle = value => {
+  updateGridContainerStyle = value =>
     this.setState({
       gridContainerStyle: value,
     });
-  };
-  updateGlobalItemStyles = value => {
+  updateGlobalItemStyles = value =>
     this.setState({
       globalItemStyle: value,
     });
-  };
   updateItemStyle = (itemIndex, value) => {
     const itemStyles = [...this.state.itemStyles];
     itemStyles[itemIndex] = value;
@@ -143,7 +151,25 @@ class App extends React.Component {
   render() {
     return (
       <Layout>
-        <Title>CSS Grid Playground</Title>
+        <Top>
+          <Title>CSS Grid Playground</Title>
+          <SocialButtons>
+            <a
+              className="twitter-share-button"
+              href="https://twitter.com/intent/tweet"
+            >
+              Tweet
+            </a>
+            <a
+              className="github-button"
+              href="https://github.com/purplecones/css-grid-playground"
+              data-show-count="true"
+              aria-label="Star purplecones/css-grid-playground on GitHub"
+            >
+              Star
+            </a>
+          </SocialButtons>
+        </Top>
         <Controls>
           <ControlSection>
             <PanelHeading>
@@ -170,21 +196,9 @@ class App extends React.Component {
             />
           </ControlSection>
         </Controls>
-        <GridContainer
-          autoHideItemStyle={this.state.autoHideItemStyle}
-          gridItemColor={this.state.gridItemColor}
-          gridContainerStyle={this.state.gridContainerStyle}
-        >
+        <GridContainer gridContainerStyle={this.state.gridContainerStyle}>
           {this.renderGridItems()}
         </GridContainer>
-        <GithubLogo>
-          <a href="https://github.com/purplecones/css-grid-playground">
-            <img
-              src={`${process.env.PUBLIC_URL}/github.png`}
-              alt="Github Logo"
-            />
-          </a>
-        </GithubLogo>
       </Layout>
     );
   }

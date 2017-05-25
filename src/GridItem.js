@@ -5,15 +5,11 @@ import TextArea from './TextArea';
 const Item = styled.div`
   position: relative;
   transition: all 300ms ease-in-out;
-  padding: .5rem;
   > textarea {
-    transition: all 300ms ease-in-out;
     transition-delay: 500ms;
     opacity: ${props => (props.autoHide ? 0 : 1)};
-  }
-  &:hover {
-    outline: 1px dashed lightgray;
-    > textarea {
+    background: none;
+    &:hover, &:focus {
       height: 100%;
       width: 100%;
       transition-delay: 0s;

@@ -1,29 +1,35 @@
 exports[`test renders four grid items correctly 1`] = `
 <div
-  className="sc-bdVaJa fttYIe">
-  <div>
-    1
-  </div>
-  <div>
-    2
-  </div>
-  <div>
-    3
-  </div>
-  <div>
-    4
+  className="sc-bdVaJa NFzwl">
+  <div
+    className="sc-bwzfXH exrYNo">
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
+    <div>
+      3
+    </div>
+    <div>
+      4
+    </div>
   </div>
 </div>
 `;
 
 exports[`test renders two grid items correctly 1`] = `
 <div
-  className="sc-bdVaJa fttYIe">
-  <div>
-    1
-  </div>
-  <div>
-    2
+  className="sc-bdVaJa NFzwl">
+  <div
+    className="sc-bwzfXH exrYNo">
+    <div>
+      1
+    </div>
+    <div>
+      2
+    </div>
   </div>
 </div>
 `;

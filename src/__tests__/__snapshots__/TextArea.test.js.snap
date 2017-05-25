@@ -1,6 +1,6 @@
 exports[`test renders correctly 1`] = `
 <textarea
-  className="sc-bdVaJa iYLCcn"
+  className="sc-bdVaJa hmEYoi"
   onChange={[Function]}
   value="background: red;
 width: 100px;" />
