@@ -123,14 +123,22 @@ class App extends React.Component {
   resetStyles = () => this.setState({ itemStyles: [] });
   updateAutoItemHide = () =>
     this.setState({ autoHideItemStyle: !this.state.autoHideItemStyle });
-  incrementGridItems = () =>
+  incrementGridItems = () => {
+    const newItemStyles = [...this.state.itemStyles];
+    newItemStyles.push('');
     this.setState({
       numberOfGridItems: this.state.numberOfGridItems + 1,
+      itemStyles: newItemStyles,
     });
-  decrementGridItems = () =>
+  }
+  decrementGridItems = () => {
+    const newItemStyles = [...this.state.itemStyles];
+    newItemStyles.pop();
     this.setState({
-      numberOfGridItems: this.state.numberOfGridItems - 1,
+      numberOfGridItems: this.state.numberOfGridItems > 0 ? this.state.numberOfGridItems - 1 : 0,
+      itemStyles: newItemStyles,
     });
+  }
   renderGridItems = () =>
     [...Array(this.state.numberOfGridItems)].map((_, i) => {
       const itemStyle = this.state.itemStyles[i]
