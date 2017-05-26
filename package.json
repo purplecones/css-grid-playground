@@ -13,7 +13,7 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.10.3",
-    "pre-commit": "^1.2.2",
+    "husky": "^0.13.3",
     "react-scripts": "0.9.5",
     "react-test-renderer": "^15.4.2",
     "serve": "^5.0.1"
@@ -25,7 +25,8 @@
     "deploy": "cd build && now --static --name css-grid-playground",
     "test": "react-scripts test --env=jsdom",
     "test:cover": "yarn test -- --coverage && open coverage/lcov-report/index.html",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "CI=true yarn test"
   },
   "pre-commit": [],
   "alias": "www.cssgridplayground.com"
