@@ -1,7 +1,5 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-// import { shallow } from 'enzyme';
-import 'jest-styled-components';
 import GridItem from '../GridItem';
 
 it('renders correctly as item 1', () => {
@@ -16,8 +14,7 @@ it('renders correctly as item 1', () => {
     />
   );
   const tree = renderer.create(Component).toJSON();
-  expect(tree).toMatchStyledComponentsSnapshot();
-  // expect(tree).toMatchSnapshot();
+  expect(tree).toMatchSnapshot();
 });
 
 it('renders correctly as item 2', () => {

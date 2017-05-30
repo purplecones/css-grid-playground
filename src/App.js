@@ -164,7 +164,7 @@ class App extends React.Component {
           <SocialButtons>
             <a
               className="twitter-share-button"
-              href="https://twitter.com/intent/tweet"
+              href="https://twitter.com/intent/tweet?text=#cssgrid%20@purplecones"
             >
               Tweet
             </a>
