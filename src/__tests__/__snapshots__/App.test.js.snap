@@ -11,7 +11,7 @@ exports[`test renders correctly on compatible device 1`] = `
       className="sc-jTzLTM hEuNsT">
       <a
         className="twitter-share-button"
-        href="https://twitter.com/intent/tweet">
+        href="https://twitter.com/intent/tweet?text=#cssgrid%20@purplecones">
         Tweet
       </a>
       <a
@@ -193,7 +193,7 @@ exports[`test renders correctly on incompatible device 1`] = `
       className="sc-jTzLTM hEuNsT">
       <a
         className="twitter-share-button"
-        href="https://twitter.com/intent/tweet">
+        href="https://twitter.com/intent/tweet?text=#cssgrid%20@purplecones">
         Tweet
       </a>
       <a
@@ -375,7 +375,7 @@ exports[`test renders correctly on test runner as incompatible 1`] = `
       className="sc-jTzLTM hEuNsT">
       <a
         className="twitter-share-button"
-        href="https://twitter.com/intent/tweet">
+        href="https://twitter.com/intent/tweet?text=#cssgrid%20@purplecones">
         Tweet
       </a>
       <a
