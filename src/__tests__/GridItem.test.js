@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 // import { shallow } from 'enzyme';
+import 'jest-styled-components';
 import GridItem from '../GridItem';
 
 it('renders correctly as item 1', () => {
@@ -15,7 +16,8 @@ it('renders correctly as item 1', () => {
     />
   );
   const tree = renderer.create(Component).toJSON();
-  expect(tree).toMatchSnapshot();
+  expect(tree).toMatchStyledComponentsSnapshot();
+  // expect(tree).toMatchSnapshot();
 });
 
 it('renders correctly as item 2', () => {
@@ -34,24 +36,13 @@ it('renders correctly as item 2', () => {
 });
 
 it('renders grid item with auto hide', () => {
-  const Component = (
-    <GridItem
-      key={1}
-      itemNumber={1}
-      autoHide
-    />
-  );
+  const Component = <GridItem key={1} itemNumber={1} autoHide />;
   const tree = renderer.create(Component).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
 it('renders grid item without auto hide', () => {
-  const Component = (
-    <GridItem
-      key={1}
-      itemNumber={1}
-    />
-  );
+  const Component = <GridItem key={1} itemNumber={1} />;
   const tree = renderer.create(Component).toJSON();
   expect(tree).toMatchSnapshot();
 });

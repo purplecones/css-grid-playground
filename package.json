@@ -8,12 +8,14 @@
     "styled-components": "^2.0.0"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.35.3",
     "babel-eslint": "^7.2.1",
     "eslint": "^3.18.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.10.3",
     "husky": "^0.13.3",
+    "jest-styled-components": "^2.1.1",
     "react-scripts": "0.9.5",
     "react-test-renderer": "^15.4.2",
     "serve": "^5.0.1"
@@ -26,8 +28,12 @@
     "test": "react-scripts test --env=jsdom",
     "test:cover": "yarn test -- --coverage && open coverage/lcov-report/index.html",
     "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
     "precommit": "CI=true yarn test"
   },
-  "pre-commit": [],
+  "jest": {
+    "testEnvironment": "node"
+  },
   "alias": "www.cssgridplayground.com"
 }
